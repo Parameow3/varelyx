@@ -10,7 +10,7 @@ Varelyx - evidence-driven retail continuity intelligence.
 When a retail operating plan breaks, Varelyx identifies the evidence that matters, asks for the missing fact most likely to change the decision, computes feasible responses, proves them against hard rules, and only then turns a verified plan into execution-ready actions.
 
 ## Why GenAI is necessary
-Operational disruptions arrive as messy language and ambiguous supplier messages. Gemini converts that evidence into structured operational state and generates a focused evidence request for the most decision-critical unknown. Gemini does **not** invent order quantities. Deterministic constrained logic computes quantities and an independent Proof Gate verifies hard rules before action.
+Operational disruptions arrive as messy language and ambiguous supplier messages. Gemini converts that evidence into structured operational state. Deterministic sensitivity analysis ranks missing facts and selects the focused evidence question. Gemini does **not** invent order quantities. Deterministic constrained logic computes quantities and an independent Proof Gate verifies hard rules before action.
 
 ## Google stack used by the submitted web prototype
 - Firebase Hosting on the Spark plan.
@@ -34,14 +34,14 @@ The older FastAPI / OR-Tools / Cloud Run implementation remains an optional engi
 8. Shadow Mode comparison with simulation labels.
 
 ## Three-minute demo flow
-1. Show the controlled Bangladesh Continuity Twin: 250 stores, 1,200 SKUs, 6 suppliers.
+1. Show one controlled retail disruption. The current planner uses aggregate case quantities and fixed demand scenarios; do not present it as store-by-SKU network optimization.
 2. Analyze the Bangla/Banglish disruption with **live Gemini**.
 3. Point out DECISION NOT READY and the missing Supplier B Thursday capacity.
 4. Confirm capacity = 120 cases.
 5. Compare current, cheapest, balanced, and maximum-availability strategies.
 6. Prove balanced plan -> PASS.
 7. Prove the unsafe aggressive proposal -> BLOCK and show violated constraints.
-8. Approve the balanced plan -> persistent Firebase action objects appear.
+8. Prove the balanced plan again -> PASS, then approve it -> persistent Firebase sandbox action objects appear.
 9. Refresh to show persistence.
 10. Show Shadow Mode and explicitly state that the numbers are controlled simulation.
 

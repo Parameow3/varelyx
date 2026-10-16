@@ -71,7 +71,24 @@ export const EXTRACTION_SCHEMA = {type: 'object', properties: {
     affected_routes: {type: ['string', 'null']}, capacity_confirmed: {type: ['string', 'null']}},
     required: ['delay_hours', 'affected_routes', 'capacity_confirmed']}
 }, required: ['delay_hours', 'affected_routes', 'supplier', 'capacity_confirmed', 'summary', 'confidence', 'evidence_quotes']};
-export function validateExtraction(raw, source) {
+
+// Conservative grounding checks, not a general natural-language verifier.
+// Unknown units or ambiguous/negated clauses must be clarified and reviewed.
+function fieldSupportsNumber(key, value, quote) {
+  const text = normalize(quote);
+  const units = key === 'delay_hours' ? '(hours?|hrs?|days?|din|ঘণ্টা|ঘন্টা|দিন)'
+    : key === 'affected_routes' ? '((?:(?:distribution|delivery)\\s+)?routes?|রুট)' : '(cases?|কেস)';
+  const pair = new RegExp('(?<![\\d.\\-])([0-9]+)(?:টি|টা|ta)?[\\s-]*'+units+'(?![a-z\\u0980-\\u09ff])', 'g');
+  const values = [...text.matchAll(pair)].map(match => key === 'delay_hours' && /^(days?|din|দিন)$/.test(match[2]) ? Number(match[1])*24 : Number(match[1]));
+  if (!values.includes(value)) return false;
+  if (/\b(?:not|unconfirmed|unknown|maybe|between|or)\b|অনিশ্চিত|অজানা|নয়|নেই|হয়নি|নিশ্চিত নয়/.test(text)) return false;
+  if (key === 'capacity_confirmed' && /\b(?:approximately|about)\b/.test(text)) return false;
+  if (key === 'delay_hours' && !/\b(?:late|delay(?:ed)?|deri)\b|দেরি|বিলম্ব/.test(text)) return false;
+  if (key === 'capacity_confirmed' && !/\b(?:capacity|maximum|max|can supply|can deliver)\b|ক্ষমতা|সরবরাহ করতে পার/.test(text)) return false;
+  // Multiple different values for the same unit in one quote are ambiguous.
+  return new Set(values).size === 1;
+}
+export function validateExtraction(raw, source, {checkFieldUnits = true} = {}) {
   if (!raw || typeof raw !== 'object' || Array.isArray(raw)) throw Error('Gemini output must be an object');
   if (typeof source !== 'string' || !source.trim() || source.length > 8000) throw Error('Evidence must contain 1-8000 characters');
   if (typeof raw.summary !== 'string' || !raw.summary.trim() || raw.summary.length > 2000) throw Error('Invalid evidence summary');
@@ -88,6 +105,7 @@ export function validateExtraction(raw, source) {
       const numbers = normalize(quote).match(/\d+/g)?.map(Number) || [];
       const days = key === 'delay_hours' && /days?|din|\u09a6\u09bf\u09a8/.test(normalize(quote));
       if (!numbers.includes(value) && !(days && numbers.some(n => n * 24 === value))) throw Error('Unsupported number: ' + key);
+      if (checkFieldUnits && !fieldSupportsNumber(key, value, quote)) throw Error('Unsupported field/unit or ambiguous source: ' + key + '. Clarify the supplier message and analyze again.');
     }
     out[key] = value;
     out.evidence_quotes[key] = value === null ? null : quote;
@@ -101,7 +119,7 @@ export function initialState() {
 }
 export function applyExtraction(state, raw, source) {
   const extraction = validateExtraction(raw, source);
-  return {...state, source, extraction, liveVerified: true, evidenceReviewed: false, supplierCapacity: null,
+  return {...state, source, extraction, extractionValidationVersion: 1, liveVerified: true, evidenceReviewed: false, supplierCapacity: null,
     confirmedAt: null, proof: null, phase: 'EVIDENCE_REVIEW_REQUIRED',
     audit: [...state.audit, {event: 'LIVE_EVIDENCE_EXTRACTED', at: new Date().toISOString()}]};
 }
@@ -182,7 +200,9 @@ export function restore(payload) {
   const s = JSON.parse(payload);
   if (!s || s.schemaVersion !== 2 || typeof s.runId !== 'string' || !Array.isArray(s.actions) || !Array.isArray(s.audit) || !Array.isArray(s.archive)) throw Error('Stored session is invalid; do not overwrite it');
   if (!s.receipts || typeof s.receipts !== 'object' || Array.isArray(s.receipts)) throw Error('Stored receipt archive is invalid');
-  if (s.extraction) s.extraction = validateExtraction(s.extraction, s.source);
+  // Preserve access to historical sessions validated by the previous release.
+  // Every newly analyzed extraction uses the stricter field/unit contract.
+  if (s.extraction) s.extraction = validateExtraction(s.extraction, s.source, {checkFieldUnits: s.extractionValidationVersion === 1});
   if (s.supplierCapacity !== null && !integer(s.supplierCapacity)) throw Error('Stored capacity is invalid');
   if (typeof s.liveVerified !== 'boolean' || typeof s.evidenceReviewed !== 'boolean') throw Error('Stored evidence flags are invalid');
   return s;

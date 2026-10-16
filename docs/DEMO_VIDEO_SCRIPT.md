@@ -1,6 +1,6 @@
 # Varelyx - 3 Minute Demo Video Script
 
-Target: **2:40-2:55**. Never exceed the official 3-minute requirement.
+Working recording target: **under 3 minutes**. Confirm the final duration and other requirements in the organizer dashboard before recording; this script is not evidence of the official limit.
 
 ## 0:00-0:18 - Problem
 
@@ -21,7 +21,7 @@ Briefly point to **KNOW -> ASK -> PROVE -> ACT**.
 Click **Analyze disruption with Gemini**.
 
 **Voiceover:**  
-"Gemini interprets the unstructured disruption message, separates evidence from uncertainty, and identifies the missing fact that can change the decision. The model helps understand evidence; it does not get authority to invent executable order quantities."
+"Gemini structures the disruption evidence. Deterministic sensitivity analysis selects the missing fact most likely to change this controlled decision. The model helps understand evidence; it does not get authority to invent executable order quantities."
 
 Show **LIVE GEMINI VERIFIED**, Known / Estimated / Unknown, and the critical question.
 
@@ -36,17 +36,17 @@ Show strategy recomputation.
 
 ## 1:35-2:05 - Proof Gate differentiation
 
-Run the balanced plan and show **PASS**. Then run the intentionally unsafe proposal and show **BLOCK**.
+Run the balanced plan and show **PASS**. Then run the intentionally unsafe proposal and show **BLOCK**, with approval disabled. **Prove the balanced candidate again and show PASS before proceeding to approval.**
 
 **Voiceover:**  
-"This is the key difference. The Proof Gate independently checks hard constraints. A balanced plan passes; an unsafe proposal is blocked even if an AI could describe it persuasively."
+"This is the key difference. The Proof Gate independently checks the listed hard constraints; it does not verify every predicted outcome metric. A balanced plan passes; an unsafe proposal is blocked even if an AI could describe it persuasively."
 
 ## 2:05-2:28 - Human approval + persistence
 
 Approve the verified plan and show the persisted action objects. Refresh and show that the state remains.
 
 **Voiceover:**  
-"Execution stays human-controlled. Approved actions are persisted in Firebase, preserving a traceable path from evidence to decision."
+"Execution stays human-controlled. Approved sandbox action records are saved in Firebase and survive reload. No real purchase or transfer is sent."
 
 ## 2:28-2:52 - Architecture + impact
 

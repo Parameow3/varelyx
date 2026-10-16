@@ -14,7 +14,7 @@ Owner: entrant + engineering
 - [ ] Confirm Supplier B Thursday capacity = **120 cases**.
 - [ ] Balanced plan -> **PASS**.
 - [ ] Unsafe proposal -> **BLOCK**.
-- [ ] Approve verified plan.
+- [ ] Prove balanced again -> **PASS**, then approve the verified plan.
 - [ ] Refresh -> approved state/actions still present.
 - [ ] Capture proof screenshots.
 

@@ -74,7 +74,8 @@
             <div id="questionBox" class="question-card"></div>
             <div class="why-card"><span data-i18n="why">WHY THIS MATTERS</span><p data-i18n="whyText">This is the current decision bottleneck: resolving it can materially change the feasible response under the controlled sensitivity model.</p></div>
             <label for="capacityInput" data-i18n="capacityLabel">Operator-confirmed Supplier B Thursday capacity</label>
-            <div class="answer-row"><input id="capacityInput" type="number" min="0" value="120" aria-label="Supplier B confirmed capacity"><button id="answerBtn" data-i18n="reviewConfirm">Review & confirm</button></div>
+            <div class="answer-row"><input id="capacityInput" type="number" min="0" max="10000" step="1" aria-label="Supplier B confirmed capacity" aria-describedby="capacitySuggestion"><button id="answerBtn" data-i18n="reviewConfirm">Review & confirm</button></div>
+            <p id="capacitySuggestion" class="hint" aria-live="polite"></p>
             <p class="hint" data-i18n="confirmationHint">Confirmation is human input. Gemini may surface evidence, but it does not authorize executable quantities.</p>
           </article>
         </div>

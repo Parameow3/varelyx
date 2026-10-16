@@ -1,5 +1,10 @@
 # Varelyx - Project Handoff / Single Source of Truth
 
+## October 16, 2026: candidate fixes awaiting review
+
+Submission reliability fixes are prepared on `fix/submission-reliability`. They have local unit, Python/OR-Tools, and isolated browser verification; they have **not** been deployed or verified against live Gemini/Firebase. The production evidence below is historical. See `docs/SUBMISSION_FIXES_2026-10-16.md` for scope, limitations and the joint release gate.
+
+
 Last updated: 2026-09-30
 Competition: Google Cloud AI Builder Cup 2026, powered by Hack2skill
 Theme: Retail & Commerce - Intelligent Customer and Business Experiences

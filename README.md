@@ -12,7 +12,7 @@ The final no-card competition path is:
 
 No Vercel. No Supabase. No Blaze upgrade is required for the primary submission path.
 
-The public web prototype uses Gemini to interpret messy Bangla/Banglish/English disruption evidence and generate a focused evidence question. Operational quantities are computed by deterministic constrained logic, not invented by the model. An independent Proof Gate can HOLD or BLOCK unsafe plans before human approval.
+The public web prototype uses Gemini to interpret messy Bangla/Banglish/English disruption evidence. Deterministic sensitivity analysis selects a focused evidence question. Operational quantities are computed by deterministic constrained logic, not invented by the model. An independent Proof Gate can HOLD or BLOCK unsafe plans before human approval.
 
 ## Current working flow
 
@@ -23,7 +23,7 @@ The public web prototype uses Gemini to interpret messy Bangla/Banglish/English 
 5. Recompute current / cheapest / balanced / maximum-availability plans.
 6. Prove the balanced plan -> PASS.
 7. Try an intentionally unsafe proposal -> BLOCK.
-8. Approve the verified plan.
+8. Prove the balanced plan again -> PASS, then approve the verified plan.
 9. Persist action objects in Firebase Realtime Database.
 10. Compare the response in Shadow Mode.
 
@@ -77,7 +77,7 @@ After deployment, verify all of these on the public URL:
 - Supplier capacity 120 resolves the critical unknown.
 - Balanced plan -> PASS.
 - Unsafe proposal -> BLOCK.
-- Approval creates backend action objects.
+- Prove balanced again -> PASS, then approval creates sandbox action objects.
 - Refresh preserves the session state/actions.
 - Simulation values remain explicitly labelled.
 
