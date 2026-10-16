@@ -88,6 +88,10 @@ See:
 - `DEPLOYMENT_STATUS.md`
 
 
+## Local development
+
+Run `npm run dev` and open http://127.0.0.1:4174. Register the private device token with Firebase App Check once, as described in [Local development](docs/LOCAL_DEVELOPMENT.md). Live AI and Firebase persistence still require project access; this server does not disable App Check.
+
 ## Cloud development
 
 Varelyx can be developed without a local PC by opening this repository in GitHub Codespaces. The devcontainer pins Node 22 and Python 3.12, installs Python and Node dependencies, and forwards port 4173 for local preview.

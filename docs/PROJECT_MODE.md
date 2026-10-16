@@ -8,3 +8,5 @@ Proof needed: live Gemini, PASS/BLOCK, persisted action, refresh survival.
 Next: review the draft pull request, coordinate with the team, then verify the candidate against live services before production deployment.
 State: DEPLOYMENT_STATUS.md and docs/SUBMISSION_READY.md
 Standard: Saidur-droid/global-hackathon-opportunity-tracking/standards/AI_PRODUCT_OPERATING_STANDARD.md
+
+Local development: `npm run dev` configures a private device debug token; live AI/saving await Firebase App Check token registration by the project owner. See docs/LOCAL_DEVELOPMENT.md.

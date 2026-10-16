@@ -1,5 +1,9 @@
 # Varelyx Deployment Status
 
+## October 16, 2026: local App Check setup
+
+A loopback-only development server now configures a private App Check device token before Firebase initializes. Local startup configuration is verified, but token registration returned HTTP 403 for Chhay's account. Live local Gemini and Firebase saving remain pending project-owner registration/access. See `docs/LOCAL_DEVELOPMENT.md`. Production enforcement and deployment are unchanged.
+
 ## October 16, 2026: candidate fixes awaiting review
 
 Submission reliability fixes are prepared on `fix/submission-reliability`. They have local unit, Python/OR-Tools, and isolated browser verification; they have **not** been deployed or verified against live Gemini/Firebase. The production evidence below is historical. See `docs/SUBMISSION_FIXES_2026-10-16.md` for scope, limitations and the joint release gate.
