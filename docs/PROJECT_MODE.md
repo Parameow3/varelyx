@@ -2,7 +2,7 @@
 
 Mode: COMPETITION
 Overlay: Google Cloud AI Builder Cup 2026
-Milestone: Review submission reliability fixes on fix/submission-reliability; repeat live Firebase/Gemini judge flow together before release.
+Milestone: Review refined decision workspace and submission reliability fixes on fix/submission-reliability; repeat live Firebase/Gemini judge flow together before release.
 Core flow: disruption -> missing evidence -> constrained plan -> Proof Gate -> approval -> persisted action.
 Proof needed: live Gemini, PASS/BLOCK, persisted action, refresh survival.
 Next: review the draft pull request, coordinate with the team, then verify the candidate against live services before production deployment.
@@ -10,3 +10,5 @@ State: DEPLOYMENT_STATUS.md and docs/SUBMISSION_READY.md
 Standard: Saidur-droid/global-hackathon-opportunity-tracking/standards/AI_PRODUCT_OPERATING_STANDARD.md
 
 Local development: `npm run dev` configures a private device debug token; live AI/saving await Firebase App Check token registration by the project owner. See docs/LOCAL_DEVELOPMENT.md.
+
+UI/workflow review and local acceptance evidence: docs/UIUX_REVIEW_2026-10-17.md.

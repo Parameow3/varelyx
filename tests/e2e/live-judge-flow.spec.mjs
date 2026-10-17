@@ -9,7 +9,6 @@ test('real judge flow: Firebase + Gemini + HOLD/PASS/BLOCK + approval + reload r
   test.skip(process.env.LIVE_JUDGE_FLOW !== '1', 'Run only against the official Firebase deployment');
   test.skip(testInfo.project.name !== 'desktop-1440', 'Run the real mutating judge flow once; responsive coverage is handled separately');
   test.setTimeout(180_000);
-  page.on('dialog', dialog => dialog.accept());
   await enableCiAppCheck(page);
 
   await page.goto('/', {waitUntil:'domcontentloaded'});
@@ -25,7 +24,7 @@ test('real judge flow: Firebase + Gemini + HOLD/PASS/BLOCK + approval + reload r
   await expect(page.locator('#decisionBanner')).toContainText('HOLD');
 
   await page.locator('#capacityInput').fill('120');
-  await page.locator('#answerBtn').click();
+  await page.locator('#answerBtn').click();await page.locator('#dialogConfirm').click();
   await expect(page.locator('#decisionBanner')).toContainText('DECISION READY', {timeout:20_000});
 
   await page.locator('[data-proof="balanced"]').click();
@@ -43,7 +42,7 @@ test('real judge flow: Firebase + Gemini + HOLD/PASS/BLOCK + approval + reload r
   await page.locator('[data-proof="balanced"]').click();
   await expect(page.locator('#proof')).toContainText('PASS', {timeout:20_000});
 
-  await page.locator('#approveBtn').click();
+  await page.locator('#approveBtn').click();await page.locator('#dialogConfirm').click();
   await expect(persistence).toContainText('FIREBASE SAVE VERIFIED', {timeout:20_000});
   await expect(page.locator('#actions')).toContainText('APPROVED_SANDBOX');
   if (process.env.EVIDENCE_CAPTURE === '1') {

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+<a class="skip-link" href="#evidenceWorkspace">Skip to decision workflow</a>
 <div id="appShell" class="app-shell">
   <aside class="sidebar" aria-label="Workspace navigation">
     <a class="brand" href="#commandCenter" aria-label="Varelyx home"><span class="brand-mark">V</span><span><b>VARELYX</b><small>Decision Intelligence</small></span></a>
@@ -30,7 +31,7 @@
           <div class="incident-topline"><span class="eyebrow" data-i18n="incidentKicker">LIVE RETAIL CONTINUITY INCIDENT</span><span class="incident-scope" data-i18n="controlled">Controlled simulation</span></div>
           <h1 id="incidentTitle">Supplier disruption awaiting analysis.</h1>
           <p id="incidentSummary">Use live Gemini to structure the supplier signal, then Varelyx will expose uncertainty before any operational decision is allowed.</p>
-          <div class="command-actions"><button id="analyzeBtn" class="primary xl" data-i18n="analyze">Analyze disruption</button><a class="button secondary xl" href="#evidenceWorkspace" data-i18n="inspect">Inspect evidence</a><button id="resetBtn" class="button ghost" data-i18n="reset">Reset demo</button></div>
+          <div class="command-actions"><a id="primaryWorkflowLink" class="button primary xl hidden" href="#evidenceWorkspace">Review evidence</a><button id="analyzeBtn" class="primary xl" data-i18n="analyze">Analyze disruption</button><a class="button secondary xl" href="#evidenceWorkspace" data-i18n="inspect">Inspect evidence</a><button id="resetBtn" class="button ghost" data-i18n="reset">Reset demo</button></div>
           <div class="decision-language" aria-label="Varelyx decision method"><span>KNOW</span><i></i><span>ASK</span><i></i><span>DECIDE</span><i></i><span>PROVE</span><i></i><span>ACT</span></div>
         </div>
         <div class="command-side">
@@ -41,13 +42,12 @@
       </section>
       <section id="setupWarning" class="panel warning hidden"><b id="setupWarningTitle">Firebase setup required</b><p id="setupWarningText">Check Anonymous Authentication, Realtime Database, Firebase AI Logic and App Check configuration for this domain.</p></section>
       <section id="statusHelper" class="status-helper panel" aria-live="polite"><span id="statusHelperText">Everything is connected. Start by analyzing the supplier signal.</span><a id="nextStepBtn" class="button secondary status-next" href="#evidenceWorkspace">Go to next step</a></section>
-      <section class="onboarding-strip" aria-label="How Varelyx works">
-        <div><span>1</span><b data-i18n="guideSignal">Add the supplier signal</b></div>
-        <div><span>2</span><b data-i18n="guideReview">Review the evidence</b></div>
-        <div><span>3</span><b data-i18n="guideProve">Prove, approve and save</b></div>
-      </section>
+      <details class="onboarding-strip">
+        <summary data-i18n="walkthroughTitle">Demo walkthrough · PASS → BLOCK → PASS → approve</summary>
+        <ol><li data-i18n="guideSignal">Add the supplier signal</li><li data-i18n="guideReview">Review the evidence</li><li data-i18n="walkthroughProof">Prove the balanced plan, test the unsafe option, then prove balanced again.</li><li data-i18n="walkthroughSave">Approve the sandbox actions, reload, and check the saved receipt.</li></ol>
+      </details>
       <section id="persistenceStatus" class="status-banner panel" role="status" aria-live="polite">Connecting to verified Firebase persistence…</section>
-      <section class="stage-rail" aria-label="Decision stages"><div class="stage active" data-stage="signal"><span>1</span><div><b data-i18n="stageSignal">Signal</b><small data-i18n="stageSignalSub">Disruption received</small></div></div><div class="stage" data-stage="evidence"><span>2</span><div><b data-i18n="stageEvidence">Evidence</b><small data-i18n="stageEvidenceSub">Known vs unknown</small></div></div><div class="stage" data-stage="decision"><span>3</span><div><b data-i18n="stageDecision">Decision</b><small data-i18n="stageDecisionSub">Trade-offs computed</small></div></div><div class="stage" data-stage="proof"><span>4</span><div><b data-i18n="stageProof">Proof</b><small data-i18n="stageProofSub">Constraints verified</small></div></div><div class="stage" data-stage="action"><span>5</span><div><b data-i18n="stageAction">Action</b><small data-i18n="stageActionSub">Human approval</small></div></div></section>
+      <section class="stage-rail" aria-label="Decision stages"><a class="stage active" data-stage="signal" href="#evidenceWorkspace"><span>1</span><div><b data-i18n="stageSignal">Signal</b><small data-i18n="stageSignalSub">Disruption received</small></div></a><a class="stage" data-stage="evidence" href="#evidenceScout"><span>2</span><div><b data-i18n="stageEvidence">Evidence</b><small data-i18n="stageEvidenceSub">Known vs unknown</small></div></a><a class="stage" data-stage="decision" href="#scenarioWorkspace"><span>3</span><div><b data-i18n="stageDecision">Decision</b><small data-i18n="stageDecisionSub">Trade-offs computed</small></div></a><a class="stage" data-stage="proof" href="#proofWorkspace"><span>4</span><div><b data-i18n="stageProof">Proof</b><small data-i18n="stageProofSub">Constraints verified</small></div></a><a class="stage" data-stage="action" href="#actionWorkspace"><span>5</span><div><b data-i18n="stageAction">Action</b><small data-i18n="stageActionSub">Human approval</small></div></a></section>
       <section class="metrics" id="metrics" aria-label="Decision metrics"></section>
       <section id="evidenceWorkspace" class="workspace-section investigation-workspace">
         <div class="section-head"><div><span class="eyebrow" data-i18n="evidenceEyebrow">02 · KNOW + ASK</span><h2 data-i18n="evidenceTitle">Investigate the disruption before deciding.</h2></div><p data-i18n="evidenceIntro">Signal, provenance, uncertainty and the decision-critical missing fact stay on one surface.</p></div>
@@ -57,7 +57,8 @@
             <label for="disruptionInput" data-i18n="supplierEvidence">Supplier / operations evidence</label>
             <textarea id="disruptionInput" rows="7">Supplier B has informed us that Thursday's scheduled delivery will arrive approximately 48 hours late due to a vehicle breakdown and warehouse congestion. The delay affects 2 distribution routes serving Dhaka North and Gazipur. Current stock is expected to cover only part of Thursday demand. Supplier B has not yet confirmed how many replacement cases can be supplied on Thursday. Operations should assess transfer, emergency supply, and cash constraints before any replenishment decision is approved.</textarea>
             <button id="analyzeEvidenceBtn" class="button secondary" type="button" data-i18n="analyzeSignal">Analyze this signal</button>
-            <div id="geminiResult" class="resultBox" aria-live="polite"></div>
+            <p id="analysisSummary" class="analysis-summary" aria-live="polite"></p>
+            <details class="extraction-details"><summary data-i18n="extractionDetails">View extracted fields and source quotes</summary><div id="geminiResult" class="resultBox"></div></details>
           </article>
           <article id="evidenceMatrix" class="panel evidence-panel">
             <div class="panel-topline"><span class="panel-label" data-i18n="matrix">EVIDENCE MATRIX</span><div class="evidence-legend" aria-label="Evidence states"><span data-i18n="confirmed">Confirmed</span><span data-i18n="estimated">Estimated</span><span data-i18n="unknown">Unknown</span><span data-i18n="stale">Stale</span></div></div>
@@ -74,7 +75,8 @@
             <div id="questionBox" class="question-card"></div>
             <div class="why-card"><span data-i18n="why">WHY THIS MATTERS</span><p data-i18n="whyText">This is the current decision bottleneck: resolving it can materially change the feasible response under the controlled sensitivity model.</p></div>
             <label for="capacityInput" data-i18n="capacityLabel">Operator-confirmed Supplier B Thursday capacity</label>
-            <div class="answer-row"><input id="capacityInput" type="number" min="0" max="10000" step="1" aria-label="Supplier B confirmed capacity" aria-describedby="capacitySuggestion"><button id="answerBtn" data-i18n="reviewConfirm">Review & confirm</button></div>
+            <div class="answer-row"><input id="capacityInput" type="number" min="0" max="10000" step="1" aria-label="Supplier B confirmed capacity" aria-describedby="capacitySuggestion capacityError"><button id="answerBtn" data-i18n="reviewConfirm">Review & confirm</button></div>
+            <p id="capacityError" class="field-error" role="alert"></p>
             <p id="capacitySuggestion" class="hint" aria-live="polite"></p>
             <p class="hint" data-i18n="confirmationHint">Confirmation is human input. Gemini may surface evidence, but it does not authorize executable quantities.</p>
           </article>
@@ -86,7 +88,7 @@
         <div class="decision-surface">
           <article id="selectedCandidate" class="panel selected-candidate">
             <div class="panel-topline"><span class="panel-label" data-i18n="selectedProof">SELECTED FOR PROOF</span><span class="candidate-type" data-i18n="balanced">Balanced demo candidate</span></div>
-            <div id="strategies"></div>
+            <p id="scenarioReadiness" class="scenario-readiness" aria-live="polite"></p><div id="strategies"></div>
             <div class="tradeoff-key" aria-label="Operational tradeoffs"><span>Transfer</span><span>Supplier B</span><span>Emergency</span><span>Cash</span><span>Expected stockout</span><span>Robustness</span></div>
           </article>
           <aside id="alternativeStrategies" class="panel alternatives-panel"><div class="panel-label" data-i18n="alternatives">ALTERNATIVES</div><div id="alternativeStrategyCards"></div></aside>
@@ -98,7 +100,7 @@
         <div class="proof-state-strip" aria-label="Proof states"><span>PASS</span><span>HOLD</span><span>BLOCK</span></div>
         <div class="grid proof-layout">
           <div class="panel proof-control"><span class="panel-label" data-i18n="verification">DECISION VERIFICATION</span><h3>Prove the selected candidate—or deliberately test an unsafe proposal.</h3><div class="proof-actions"><button data-proof="balanced" data-i18n="proveCandidate">Prove balanced candidate</button><button data-proof="unverified-aggressive" class="danger" data-i18n="unsafe">Test unsafe proposal</button></div><div class="receipt-disclaimer">Receipt binds the current controlled evidence, plan and checks. It is not a blockchain attestation or server-authoritative procurement approval.</div></div>
-          <div id="proofOutcome" class="panel proof-result"><div class="panel-topline"><span class="panel-label" data-i18n="proofOutcome">PROOF OUTCOME</span><span id="proofFreshness" class="proof-freshness">Not run</span></div><div class="constraint-head"><span>Rule</span><span>Observed</span><span>Result</span></div><div id="proof"><p class="hint">No plan proven for the current evidence.</p></div><button id="copyReceiptBtn" class="button secondary" disabled data-i18n="copyReceipt">Copy proof receipt</button></div>
+          <div id="proofOutcome" class="panel proof-result"><div class="panel-topline"><span class="panel-label" data-i18n="proofOutcome">PROOF OUTCOME</span><span id="proofFreshness" class="proof-freshness">Not run</span></div><div class="constraint-head"><span>Rule</span><span>Observed</span><span>Result</span></div><div id="proof"><p class="hint">No plan proven for the current evidence.</p></div><div id="proofHistory" class="proof-history" aria-label="Saved proof history"></div><button id="copyReceiptBtn" class="button secondary" disabled data-i18n="copyReceipt">Copy proof receipt</button></div>
         </div>
       </section>
       <section id="actionWorkspace" class="workspace-section act-workspace">
@@ -119,6 +121,13 @@
     <footer><div><b>VARELYX</b> · Built in Bangladesh for volatile commerce everywhere.</div><div data-i18n="footer">Competition prototype · controlled simulation · human-in-the-loop</div></footer>
   </div>
 </div>
+<dialog id="reviewDialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescription">
+  <form method="dialog">
+    <div class="dialog-heading"><span class="eyebrow" data-i18n="operatorReview">OPERATOR REVIEW</span><button id="dialogClose" class="button ghost" value="cancel" aria-label="Close review">×</button></div>
+    <h2 id="dialogTitle"></h2><p id="dialogDescription"></p><div id="dialogContent"></div>
+    <div class="dialog-actions"><button id="dialogCancel" class="button secondary" value="cancel" data-i18n="cancelReview">Cancel</button><button id="dialogConfirm" class="primary" value="confirm"></button></div>
+  </form>
+</dialog>
 <script type="module" src="/app.js"></script>
 </body>
 </html>

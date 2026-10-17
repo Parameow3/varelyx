@@ -1,5 +1,10 @@
 # Varelyx - Project Handoff / Single Source of Truth
 
+## October 17, 2026: UI/UX and operator workflow candidate
+
+The decision workspace now has clearer current-step navigation, in-app evidence/approval dialogs, readable retail action records, and saved PASS/BLOCK history. Local fixture-based verification is documented in `docs/UIUX_REVIEW_2026-10-17.md`. Live Firebase/Gemini verification and production release remain pending; the older production evidence below is historical.
+
+
 ## October 16, 2026: candidate fixes awaiting review
 
 Submission reliability fixes are prepared on `fix/submission-reliability`. They have local unit, Python/OR-Tools, and isolated browser verification; they have **not** been deployed or verified against live Gemini/Firebase. The production evidence below is historical. See `docs/SUBMISSION_FIXES_2026-10-16.md` for scope, limitations and the joint release gate.

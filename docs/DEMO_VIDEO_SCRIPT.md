@@ -27,7 +27,7 @@ Show **LIVE GEMINI VERIFIED**, Known / Estimated / Unknown, and the critical que
 
 ## 1:15-1:35 - Resolve uncertainty
 
-Confirm Supplier B Thursday capacity as **120 cases**.
+Enter Supplier B Thursday capacity as **120 cases**. Open **Review & confirm**, inspect the facts and supplier source in the in-app dialog, then confirm the reviewed evidence.
 
 **Voiceover:**  
 "Once the operator confirms supplier capacity, Varelyx recomputes feasible strategies using deterministic constraints."
@@ -43,7 +43,7 @@ Run the balanced plan and show **PASS**. Then run the intentionally unsafe propo
 
 ## 2:05-2:28 - Human approval + persistence
 
-Approve the verified plan and show the persisted action objects. Refresh and show that the state remains.
+Open the approval dialog, show the quantities, cash and receipt, then approve the sandbox actions. Point to the readable action records. Refresh and show the saved approval, capacity and PASS/BLOCK/PASS proof history.
 
 **Voiceover:**  
 "Execution stays human-controlled. Approved sandbox action records are saved in Firebase and survive reload. No real purchase or transfer is sent."

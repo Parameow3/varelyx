@@ -6,7 +6,7 @@ export function buildViewModel(state, draftSource = '', connected = false, saveS
   if (stale) holds.push('Analyze the edited message before approving');
   const proofStatus = stale ? 'STALE' : (state.proof?.status ?? 'NOT_RUN');
   const approved = !stale && state.proof?.status === 'PASS' && state.actions.some(action => action.receipt_hash === state.proof.receipt_hash);
-  const decisionStatus = holds.length ? 'HOLD' : approved ? 'APPROVED' : (state.proof?.status === 'PASS' ? 'PROVEN' : 'READY');
+  const decisionStatus = holds.length ? 'HOLD' : approved ? 'APPROVED' : state.proof?.status === 'BLOCK' ? 'BLOCK' : state.proof?.status === 'HOLD' ? 'HOLD' : (state.proof?.status === 'PASS' ? 'PROVEN' : 'READY');
   const question = nextQuestion(state);
   const unresolvedEvidenceCount = !state.liveVerified || !state.extraction ? null : [
     state.extraction.delay_hours === null,
@@ -32,6 +32,10 @@ export function buildViewModel(state, draftSource = '', connected = false, saveS
   const base = {
     state,
     approved,
+    canReview:connected && state.liveVerified && Boolean(state.extraction) && !stale,
+    canProve:connected && !holds.length,
+    canApprove:connected && !holds.length && proofStatus === 'PASS' && !approved,
+    estimatesReady:!holds.length,
     stale,
     holds,
     plans: plansFor(state),

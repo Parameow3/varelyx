@@ -71,3 +71,10 @@ test('historical saved sessions remain readable while new analyses require field
   const current={...legacy,extractionValidationVersion:1};
   assert.throws(()=>restore(JSON.stringify(current)),/field\/unit/);
 });
+test('edited evidence disables confirmation, proof and approval until reanalysis',async()=>{
+  const state=ready();state.proof=await prove(plansFor(state).find(p=>p.id==='balanced'),state);
+  const stale=buildViewModel(state,source+' Edited',true,{verified:true});
+  assert.equal(stale.canReview,false);assert.equal(stale.canProve,false);assert.equal(stale.canApprove,false);assert.equal(stale.estimatesReady,false);
+  const current=buildViewModel(state,source,true,{verified:true});
+  assert.equal(current.canReview,true);assert.equal(current.canProve,true);assert.equal(current.canApprove,true);
+});

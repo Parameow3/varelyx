@@ -178,6 +178,12 @@ export async function prove(plan, state) {
     evidenceReviewed: state.evidenceReviewed, liveVerified: state.liveVerified, checks};
   return {status, checks, strategy_id: plan.id, receipt_hash: await digest(payload), payload, created_at: new Date().toISOString()};
 }
+export function recordProof(state, proof) {
+  return {...state, proof, phase:proof.status, audit:[...state.audit, {
+    event:'PROOF_GENERATED', status:proof.status, strategy_id:proof.strategy_id,
+    receipt_hash:proof.receipt_hash, at:proof.created_at
+  }]};
+}
 export function unsafePlan() {
   const p = {id: 'unverified-aggressive', name: 'Unsafe proposal', transfer_cases: 130, supplier_b_cases: 200, emergency_cases: 110, shortage_cases: 0};
   return {...p, cash_required_bdt: cost(p), ...metrics(130, 200, 110)};

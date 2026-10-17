@@ -1,5 +1,10 @@
 # Varelyx Deployment Status
 
+## October 17, 2026: UI/UX and operator workflow candidate
+
+The decision workspace now has clearer current-step navigation, in-app evidence/approval dialogs, readable retail action records, and saved PASS/BLOCK history. Local fixture-based verification is documented in `docs/UIUX_REVIEW_2026-10-17.md`. Live Firebase/Gemini verification and production release remain pending; the older production evidence below is historical.
+
+
 ## October 16, 2026: local App Check setup
 
 A loopback-only development server now configures a private App Check device token before Firebase initializes. Local startup configuration is verified, but token registration returned HTTP 403 for Chhay's account. Live local Gemini and Firebase saving remain pending project-owner registration/access. See `docs/LOCAL_DEVELOPMENT.md`. Production enforcement and deployment are unchanged.

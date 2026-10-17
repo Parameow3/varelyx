@@ -20,7 +20,6 @@ test.beforeEach(async({page,baseURL})=>{
     if(request.method()==='PUT') envelope=request.postDataJSON();
     await route.fulfill({contentType:'application/json',headers:{'access-control-allow-origin':'*','access-control-expose-headers':'etag',etag:'"'+(envelope?.revision??0)+'"'},body:JSON.stringify(envelope)});
   });
-  page.on('dialog',dialog=>dialog.accept());
   await page.goto('/');
   await expect(page.locator('#persistenceStatus')).toContainText('Firebase server read verified');
 });
@@ -31,19 +30,25 @@ test('isolated full flow: evidence save, PASS/BLOCK/PASS, approval, reload and s
   await analyze(page);
   await expect(page.locator('#statusHelperText')).toContainText('Evidence saved');
   await expect(page.locator('#statusHelperText')).not.toContainText('Decision saved');
-  await page.locator('#capacityInput').fill('60');await page.locator('#answerBtn').click();
+  await page.locator('#capacityInput').fill('60');await page.locator('#answerBtn').click();await page.locator('#dialogConfirm').click();
   await expect(page.locator('#decisionStateValue')).toHaveText('Ready for Proof Gate');
   await page.reload();await expect(page.locator('#capacityInput')).toHaveValue('60');
   await page.locator('[data-proof="balanced"]').click();await expect(page.locator('#proofState')).toHaveText('Proof PASS');
   await page.locator('[data-proof="unverified-aggressive"]').click();await expect(page.locator('#proofState')).toHaveText('Proof BLOCK');
   await expect(page.locator('#approveBtn')).toBeDisabled();
+  await expect(page.locator('#decisionBanner')).toContainText('BLOCK');
   await page.locator('[data-proof="balanced"]').click();await expect(page.locator('#proofState')).toHaveText('Proof PASS');
-  await page.locator('#approveBtn').click();await expect(page.locator('#actions')).toContainText('APPROVED_SANDBOX');
+  await page.locator('#approveBtn').click();await expect(page.locator('#dialogTitle')).toHaveText('Approve this sandbox decision?');await expect(page.locator('#dialogContent')).toContainText('BDT');await page.locator('#dialogConfirm').click();await expect(page.locator('#actions')).toContainText('APPROVED_SANDBOX');
+  await expect(page.locator('#actions')).toContainText('Store transfer');
+  await expect(page.locator('#actions')).not.toContainText('transfer_cases');
   await expect(page.locator('#decisionStateValue')).toHaveText('Approved · sandbox actions saved');
+  await expect(page.locator('#primaryWorkflowLink')).toHaveText('View audit trail');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth)).toBeLessThanOrEqual(1);
   await expect(page.locator('#approveBtn')).toBeDisabled();
-  if(process.env.LOCAL_QA_CAPTURE==='1') await page.screenshot({path:testInfo.outputPath('approved-sandbox.png'),fullPage:true});
+  if(process.env.LOCAL_QA_CAPTURE==='1'){await page.screenshot({path:testInfo.outputPath('approved-sandbox.png'),fullPage:true});await page.locator('#commandCenter').screenshot({path:testInfo.outputPath('decision-desk.png')});}
   await page.reload();await expect(page.locator('#decisionStateValue')).toHaveText('Approved · sandbox actions saved');
   await expect(page.locator('#statusHelperText')).toContainText('Decision saved');
+  await expect(page.locator('#proofHistory li .status')).toHaveText(['PASS','BLOCK','PASS']);
   await expect(page.locator('#nextStepBtn')).toHaveAttribute('href','#auditWorkspace');
   await page.locator('#disruptionInput').fill(signal+' Edited');
   await expect(page.locator('#proofState')).toHaveText('Proof stale');
@@ -54,7 +59,7 @@ test('isolated full flow: evidence save, PASS/BLOCK/PASS, approval, reload and s
   await expect(page.locator('#nextStepBtn')).toHaveAttribute('href','#evidenceWorkspace');
 });
 test('reanalysis clears old input and presents extracted capacity as an unconfirmed suggestion',async({page})=>{
-  await analyze(page);await page.locator('#capacityInput').fill('60');await page.locator('#answerBtn').click();
+  await analyze(page);await page.locator('#capacityInput').fill('60');await page.locator('#answerBtn').click();await page.locator('#dialogConfirm').click();
   await expect(page.locator('#decisionStateValue')).toHaveText('Ready for Proof Gate');
   await analyze(page);await expect(page.locator('#capacityInput')).toHaveValue('');
   const source=signal+' Thursday capacity confirmed 120 cases.';
@@ -64,7 +69,59 @@ test('reanalysis clears old input and presents extracted capacity as an unconfir
   await expect(page.locator('#capacitySuggestion')).toContainText('capacity confirmed 120 cases');
   await expect(page.locator('#capacityInput')).toHaveValue('');
   await expect(page.locator('#decisionStateValue')).toHaveText('Evidence review required');
-  await page.locator('#capacityInput').fill('0');await page.locator('#answerBtn').click();
+  await page.locator('#capacityInput').fill('0');await page.locator('#answerBtn').click();await page.locator('#dialogConfirm').click();
   await expect(page.locator('#decisionStateValue')).toHaveText('Ready for Proof Gate');
   await page.reload();await expect(page.locator('#capacityInput')).toHaveValue('0');
+});
+
+test('review can be cancelled without confirming evidence and blank capacity has an inline error',async({page},testInfo)=>{
+  await analyze(page);
+  await page.locator('#answerBtn').click();
+  await expect(page.locator('#capacityError')).toContainText('Empty input is not zero');
+  await expect(page.locator('#capacityInput')).toBeFocused();
+  await page.locator('#capacityInput').fill('120');
+  await expect(page.locator('#capacityError')).toBeEmpty();
+  await page.locator('#answerBtn').click();
+  await expect(page.getByRole('dialog')).toBeVisible();
+  await expect(page.locator('#dialogTitle')).toHaveText('Confirm the supplier evidence');
+  await expect(page.locator('#dialogContent')).toContainText('120 cases');
+  await expect(page.locator('#dialogConfirm')).toBeInViewport();
+  await expect(page.locator('#dialogCancel')).toBeInViewport();
+  if(process.env.LOCAL_QA_CAPTURE==='1')await page.screenshot({path:testInfo.outputPath('evidence-review.png')});
+  await page.getByText('Review full supplier message',{exact:true}).click();
+  await expect(page.locator('.dialog-source p')).toHaveText(signal);
+  await page.keyboard.press('Escape');
+  await expect(page.getByRole('dialog')).not.toBeVisible();
+  await expect(page.locator('#decisionStateValue')).toHaveText('Evidence review required');
+  await expect(page.locator('#answerBtn')).toBeFocused();
+  await expect(page.locator('#capacityInput')).toHaveValue('120');
+});
+
+test('source edits lock review and proof, next-step guidance focuses reanalysis, and reset is cancellable',async({page})=>{
+  await analyze(page);
+  await page.locator('#capacityInput').fill('120');await page.locator('#answerBtn').click();await page.locator('#dialogConfirm').click();
+  await expect(page.locator('[data-proof="balanced"]')).toBeEnabled();
+  await page.locator('#disruptionInput').fill(signal+' Changed');
+  await expect(page.locator('#answerBtn')).toBeDisabled();
+  await expect(page.locator('[data-proof="balanced"]')).toBeDisabled();
+  await expect(page.locator('[data-proof="unverified-aggressive"]')).toBeDisabled();
+  await page.locator('#nextStepBtn').click();await expect(page.locator('#disruptionInput')).toBeFocused();
+  await page.locator('#resetBtn').click();await expect(page.locator('#dialogTitle')).toHaveText('Start a new decision?');
+  await page.locator('#dialogCancel').click();await expect(page.locator('#disruptionInput')).toHaveValue(signal+' Changed');
+  await expect(page.locator('#capacityInput')).toHaveValue('120');
+});
+
+
+test('an unverified save stays visible in the current-step guide and locks retries',async({page})=>{
+  await page.route('https://*.firebasedatabase.app/**',async route=>{
+    if(route.request().method()==='PUT')await route.fulfill({status:403,contentType:'application/json',headers:{'access-control-allow-origin':'*'},body:'{"error":"Permission denied"}'});
+    else await route.fallback();
+  });
+  await page.locator('#disruptionInput').fill(signal);
+  await page.locator('#analyzeBtn').click();
+  await expect(page.locator('#persistenceStatus')).toContainText('Firebase save NOT VERIFIED');
+  await expect(page.locator('#statusHelperText')).toContainText('Firebase save NOT VERIFIED');
+  await expect(page.locator('#approveBtn')).toBeDisabled();
+  await expect(page.locator('#analyzeBtn')).toBeDisabled();
+  await expect(page.locator('#actions')).toContainText('No saved actions yet');
 });
