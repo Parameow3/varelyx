@@ -35,7 +35,7 @@ The older FastAPI / OR-Tools / Cloud Run implementation remains an optional engi
 7. Persistent execution objects and audit state.
 8. Shadow Mode comparison with simulation labels.
 
-## Three-minute demo flow
+## Product walkthrough for the final 3–4 minute portal video
 1. Show one controlled retail disruption. The current planner uses aggregate case quantities and fixed demand scenarios; do not present it as store-by-SKU network optimization.
 2. Analyze the Bangla/Banglish disruption with **live Gemini**.
 3. Point out DECISION NOT READY and the missing Supplier B Thursday capacity.
@@ -54,7 +54,7 @@ Do not claim observed retailer impact, customers, pilots, or production results 
 - Maintain an eligible 2-4 person team before the official team deadline.
 - Deploy the public Firebase Hosting build.
 - Verify a real Gemini response in production.
-- Record and publish the <=3-minute public demo video.
-- Prepare/upload the required proposal/deck PDF.
+- Record and publish the 3–4 minute video required by the actual portal; the older public FAQ conflicts.
+- Prepare/upload the required prescribed-template PDF, up to 5 MB.
 - Confirm the exact Retail & Commerce problem/category in the live portal.
 - Submit the live prototype URL before the official deadline.

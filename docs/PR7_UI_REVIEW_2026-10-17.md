@@ -12,7 +12,7 @@ Review candidate for `fix/submission-reliability`, October 17, 2026. The work is
 
 ## Submission-first hardening
 
-The candidate now also includes an accurate judge walkthrough/architecture and submission copy, refreshed official rules/deadlines, a reproducible 40-scenario constraint evaluation in CI, and strict release matching of the root document plus all public assets. The check detected that public Hosting still differs in 14/18 assets. Local checks passed: syntax, 134 Node, 13 Python, 72 browser cases (8 existing opt-in skips) and a fresh real-service flow. Owner release and captain-side portal/video/deck/acceptance remain pending. See `SUBMISSION_READINESS_2026-10-17.md`.
+The candidate now also includes an accurate judge walkthrough/architecture and submission copy, refreshed official rules/deadlines, a reproducible 40-scenario constraint evaluation in CI, and strict release matching of the root document plus all public assets. The check detected that public Hosting still differs in 14/18 assets. Local checks passed: syntax, 134 Node, 13 Python, 72 browser cases (8 existing opt-in skips) and a fresh real-service flow. Owner release and final video/deck/portal acceptance remain pending. See `SUBMISSION_READINESS_2026-10-17.md`.
 
 ## Mobile help repair
 
@@ -49,3 +49,5 @@ Bangla and Khmer plan/help layouts with isolated fixtures. Any verification labe
 Shared cross-device decisions were postponed. Existing anonymous-user sessions stay private; no database access rules or production App Check settings changed. Reference exchange rates are dated/editable display inputs, not live conversion feeds. Proof Gate validates its listed constraints rather than every outcome metric or arbitrary source semantics. All persisted actions are synthetic sandbox records; no external orders are sent.
 
 The earlier QA reports retain their original snapshot/commit wording. This candidate collects those verified changes for review. The canonical portfolio standard repository still returns HTTP 404 to this account; owner-side portfolio/Linear tracking remains pending.
+
+Loaded-form correction: the actual round/template are accessible after loading; requirements are 3–4 minute video, PDF up to 5 MB, description up to 1024 characters. Initial empty-round text was transient. See `SUBMISSION_FORM_VALUES.md`.

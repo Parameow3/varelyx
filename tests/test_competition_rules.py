@@ -42,7 +42,9 @@ def test_submission_package_requirements_are_locked():
     assert s["working_prototype_required"] is True
     assert s["proposal_pdf_required"] is True
     assert s["public_demo_video_required"] is True
-    assert s["demo_video_max_minutes"] == 3
+    assert (s["demo_video_min_minutes"], s["demo_video_max_minutes"]) == (3, 4)
+    assert s["brief_description_max_characters"] == 1024
+    assert s["deck_pdf_max_mb"] == 5
     assert s["english_materials_required"] is True
     assert s["public_repository_required"] is True
     assert s["brief_description_required"] is True

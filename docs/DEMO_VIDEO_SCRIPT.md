@@ -1,6 +1,6 @@
 # Varelyx · three-minute review demo
 
-This is the earlier 2:58 review draft. Saidur now owns the final video/deck; use the approved public build and the current submission checklist for final recording.
+This is the earlier 2:58 review draft, not a final submission-length video. The actual loaded form requires 3–4 minutes; older public FAQ wording conflicts. Saidur now owns the final video/deck; use the approved public build and the current submission checklist for final recording.
 
 Duration: 178.0 seconds. English system narration. Recorded local UI with real Gemini and Firebase, using a synthetic scenario. Edited for pace; not a production release or measured customer outcome.
 

@@ -4,15 +4,15 @@ Use [current readiness and ownership](SUBMISSION_READINESS_2026-10-17.md), not e
 
 ## Required package and account checks
 
-- [ ] Captain can access the ongoing submission round and prescribed deck template; audited member account currently shows neither.
+- [x] Actual Prototype Submission round/form and prescribed template inspected after loading; exact fields/limits recorded in `SUBMISSION_FORM_VALUES.md`.
 - [ ] Team eligibility, membership and latest formation-extension announcement confirmed in the portal.
 - [ ] Exact current Retail & Commerce theme/problem option selected.
 - [ ] Reviewed candidate merged/released on Firebase, with all public assets matching the candidate checkout.
-- [ ] Final public video URL works signed out and is under three minutes; Saidur owns it.
-- [ ] Prescribed-template deck PDF uploaded; Saidur owns it.
+- [ ] Final public video URL works signed out and is 3–4 minutes per the actual form (older public FAQ conflicts); Saidur owns it.
+- [ ] Prescribed-template deck PDF, up to 5 MB, uploaded; Saidur owns it.
 - [x] Source repository is public; checked via signed-out access on October 17.
 - [x] Accurate English description, current architecture, judge walkthrough and bounded evaluation prepared.
-- [ ] Captain has pasted the final description and source/prototype/video links into the actual form and checked every required field.
+- [ ] Captain has pasted the final description (up to 1024 characters) and source/prototype/video links into the actual form and checked every required field.
 
 ## Final public product proof — repeat after release
 

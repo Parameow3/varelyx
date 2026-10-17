@@ -13,3 +13,5 @@ Central portfolio and Linear synchronization remain owner-side pending because t
 Subsequent update: mobile help was repaired in `13cf08b`; all three GitHub checks passed in [run 39010685250](https://github.com/Saidur-droid/varelyx/actions/runs/39010685250). The recorded video build remains unchanged. See `MOBILE_HELP_QA_2026-10-17.md`.
 
 Latest ownership: Saidur handles the final video and prescribed-template deck. Engineering is focused on the release/submission handoff in `SUBMISSION_READINESS_2026-10-17.md`.
+
+Loaded-form requirement: the final submission video must be 3–4 minutes according to the current portal, conflicting with the older public FAQ. The 2:58 artifact remains a review draft. Template, PDF limit and prepared 855-character form copy are in `SUBMISSION_FORM_VALUES.md`.

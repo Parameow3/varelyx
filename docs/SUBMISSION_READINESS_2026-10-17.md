@@ -7,8 +7,8 @@
 | Item | Current evidence / remaining work | Owner |
 |---|---|---|
 | Live prototype | Official Firebase URL returns HTTP 200; a normal browser completed App Check, live Gemini extraction and revision-2 evidence save. The current host differs from the reviewed candidate in **14 of 18 public assets**, so latest UI release and final full-flow production QA remain required. | Project owner deploys; engineering verifies |
-| Demo video | The 2:58 narrated/captioned local review MP4 was emailed. A final public video URL showing the approved public build is still pending. | Saidur |
-| Prescribed deck PDF | Pending. Use the organizer's template; the audited member account currently exposes no resource/template. | Saidur |
+| Demo video | The 2:58 narrated/captioned local review MP4 was emailed. A final public **3–4 minute** video URL showing the approved public build is still pending, per the actual form. | Saidur |
+| Prescribed deck PDF | Pending. Use the organizer's template; the [prescribed template](https://docs.google.com/presentation/d/13rg7vW43mEH6DkpuusAE6fdoEylSFz8waNpE4RLzoUg/edit?slide=id.p#slide=id.p/export/pptx) is linked in the actual form. PDF limit: **5 MB**. | Saidur |
 | Public GitHub | `Saidur-droid/varelyx` verified public via a signed-out web request. PR #7 is open, with no review/merge yet at audit time. | Owner review; engineering source/tests |
 | Brief description | Ready-to-paste copy, actual architecture, reproducible bounded evaluation and judge walkthrough are prepared in the linked documents below. Match the captain's live field limits. | Engineering prepares; captain submits |
 
@@ -21,7 +21,7 @@
 
 The authenticated member dashboard shows **Varelyx | Commerce Cortex** with four member links. This is not proof of each person's eligibility. The captain must confirm the official age, professional status, region and participation requirements without relying on repository tests.
 
-The live Submissions page showed **“There are no ongoing submission rounds for this initiative”**, despite a closing countdown. Resources showed **“No Resources Added for this Initiative”**. No editable form, prescribed template or acceptance receipt was available to the audited account. Do not infer that the entry was submitted or that the captain sees the same page. Open the [captain submission page](https://hack2skill.com/event/aibuildercup2026/dashboard/submissions); if it also lacks the round/template, resolve that with the organizer before the cutoff. No fields, declarations or final submission were sent during this audit.
+The actual [Prototype Submission round](https://hack2skill.com/event/aibuildercup2026/dashboard/submissions/6a5da99a444e4f43e5657a85) and its required form are accessible after loading. The initial empty-round message was temporary; it is **not a confirmed access blocker**. The form exposes the theme, prototype URL, PDF upload (up to 5 MB), public repository URL, video URL (3–4 minutes), a 1024-character description, and Submit. The prescribed 16-slide deck template is linked there. [Exact prepared field values](SUBMISSION_FORM_VALUES.md). No fields were entered, saved or submitted during this audit, and no acceptance receipt has been observed.
 
 The latest loaded portal banner extends team formation to **October 17, 23:59 IST**, while the older public FAQ says October 14. The portal announcement takes precedence; confirm the captain's latest view. The October 17 organizer reminder forwarded by the team leader sets:
 
@@ -30,7 +30,7 @@ The latest loaded portal banner extends team formation to **October 17, 23:59 IS
 | Organizer's recommended submission target | October 18, 18:00 | **October 18, 19:30** |
 | Final cutoff | October 18, 23:59 | **October 19, 01:29** |
 
-The reminder says all five items are required. The official [requirements](https://aibuildercup.com/themes.html) and [FAQ](https://aibuildercup.com/Faqs.html) require a functional Google-AI/Google-Cloud prototype, public source, English materials, deck and video under three minutes. The lower category block on the themes page conflicts with its current six themes; use the live portal's Retail & Commerce selection.
+The reminder says all five items are required. The official [requirements](https://aibuildercup.com/themes.html) and [FAQ](https://aibuildercup.com/Faqs.html) require a functional Google-AI/Google-Cloud prototype, public source, English materials and a deck/video. **The actual form says video 3–4 minutes**, conflicting with the older FAQ's under-three-minute wording; current portal instructions take precedence. The old 2:58 video is a review draft. The form displays **19 October, 01:29 AM (IST)** as its ending date, conflicting with the reminder's October 18, 23:59 IST. Keep the earlier reminder cutoff as the working limit until clarified. The current theme selector explicitly includes Retail & Commerce; use that exact option.
 
 ## Release handoff
 

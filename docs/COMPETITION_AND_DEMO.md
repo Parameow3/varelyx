@@ -23,7 +23,7 @@ The official [criteria](https://aibuildercup.com/themes.html) allocate 40% techn
 
 Supplier evidence → live AI → unknown capacity → human confirms 120 → compare plans → balanced PASS → unsafe BLOCK → balanced PASS → explicit approval → five saved records → reload. Keep labels and quantities readable. Use [judge instructions](JUDGE_QUICKSTART.md), [actual architecture](ARCHITECTURE.md) and [controlled evaluation](DATA_AND_EVALUATION.md) to support the final video/deck.
 
-The 2:58 local review video already shared with Saidur is a draft, not proof of a public final video URL or a production release. He will prepare the final video/deck. Record the approved public build after normal-browser AI/save/reload checks.
+The 2:58 local review video already shared with Saidur is a draft, not proof of a public final video URL or a production release. He will prepare the final video/deck. The actual form requires video 3–4 minutes, prescribed PDF up to 5 MB and description up to 1024 characters; see `SUBMISSION_FORM_VALUES.md`. Record the approved public build after normal-browser AI/save/reload checks.
 
 ## Claims boundary
 

@@ -86,9 +86,9 @@ Rules:
 Before final submission:
 - Live Firebase-hosted working prototype.
 - Live Gemini integration verified in the deployed app.
-- PDF proposal/deck using the prescribed portal template.
-- Public <=3-minute demo video (YouTube, Vimeo, or public Google Drive).
-- Public GitHub repository and brief description.
+- PDF proposal/deck up to 5 MB using the prescribed portal template.
+- Public 3–4 minute demo video, as required in the actual portal (YouTube, Vimeo, or public Google Drive).
+- Public GitHub repository and brief description up to 1024 characters.
 - Exact theme/problem selected in portal.
 - All submission-facing code/docs/presentation in English.
 - Eligible 2–4 person team registered before the team deadline.
@@ -110,10 +110,17 @@ Do not claim "100% competition compliant" until both repository work and owner/a
 - a real Gemini response succeeds in production;
 - App Check works in production;
 - final PDF ready;
-- public <=3-minute video ready;
+- public 3–4 minute video ready (actual portal requirement);
 - portal category confirmed;
 - final submission accepted before deadline.
 
 ## Change control
 
 Every future code/demo/deck/submission change must preserve this lock. If official rules change, update this file, `competition_rules.json`, affected tests, and product behavior in the same change.
+
+
+## Actual portal update, October 17
+
+The loaded Prototype Submission form requires a **3–4 minute** video, PDF up to **5 MB**, and description up to **1024 characters**. Its template and exact fields are in `docs/SUBMISSION_FORM_VALUES.md`. The public FAQ still says under three minutes; current portal rules take precedence and this conflict is preserved explicitly in `competition_rules.json`. The 2:58 local draft is not final-duration compliance evidence.
+
+The form's ending-date label (October 19, 01:29 AM IST) conflicts with the reminder (October 18, 23:59 IST). Use the earlier reminder cutoff as the working limit until clarified, and the recommended earlier submission target. The round's initial empty message was transient loading; the actual form is accessible.
