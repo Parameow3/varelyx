@@ -1,0 +1,107 @@
+[
+  {
+    "uiLocale": "en",
+    "sampleLocale": "en",
+    "displayCurrency": "USD",
+    "passed": true,
+    "runnerSeconds": 22.1,
+    "revision": 7,
+    "actions": 5,
+    "auditEvents": 6,
+    "approvedReceipts": 1,
+    "receiptHash": "0b617cf46bf7ef4c84a5fb918d1e760f396ff12fefecc17bfc877982579ae524",
+    "exactStateRestored": true,
+    "preferencesRestored": true,
+    "extraction": {
+      "supplier": "Supplier B",
+      "summary": "Supplier B reports a 48-hour delivery delay impacting 2 distribution routes due to vehicle breakdown and warehouse congestion. Thursday's capacity has not been confirmed yet.",
+      "confidence": 0.95,
+      "evidence_quotes": {
+        "delay_hours": "arrive approximately 48 hours late",
+        "affected_routes": "affects 2 distribution routes",
+        "capacity_confirmed": null
+      },
+      "delay_hours": 48,
+      "affected_routes": 2,
+      "capacity_confirmed": null
+    },
+    "canonicalPlan": {
+      "transfer_cases": 90,
+      "supplier_b_cases": 120,
+      "emergency_cases": 60,
+      "cash_required_bdt": 186000,
+      "expected_stockout_cases": 30
+    },
+    "exportedAt": "2026-10-17T05:08:20.231Z"
+  },
+  {
+    "uiLocale": "bn",
+    "sampleLocale": "bn",
+    "displayCurrency": "BDT",
+    "passed": true,
+    "runnerSeconds": 24.2,
+    "revision": 7,
+    "actions": 5,
+    "auditEvents": 6,
+    "approvedReceipts": 1,
+    "receiptHash": "ca5450140e2573c6d4b8a60cf380fd9e3b535bef1568ee13a26cb7fd3d6b1db8",
+    "exactStateRestored": true,
+    "preferencesRestored": true,
+    "extraction": {
+      "supplier": "Supplier B",
+      "summary": "Supplier B reports a delivery delay of approximately 48 hours on Thursday due to vehicle breakdown and warehouse congestion, affecting 2 routes in Dhaka North and Gazipur. Thursday's capacity has not been confirmed yet.",
+      "confidence": 0.95,
+      "evidence_quotes": {
+        "delay_hours": "48 ঘণ্টা দেরি হবে",
+        "affected_routes": "2 রুট প্রভাবিত হবে",
+        "capacity_confirmed": null
+      },
+      "delay_hours": 48,
+      "affected_routes": 2,
+      "capacity_confirmed": null
+    },
+    "canonicalPlan": {
+      "transfer_cases": 90,
+      "supplier_b_cases": 120,
+      "emergency_cases": 60,
+      "cash_required_bdt": 186000,
+      "expected_stockout_cases": 30
+    },
+    "exportedAt": "2026-10-17T05:08:54.027Z"
+  },
+  {
+    "uiLocale": "km",
+    "sampleLocale": "km",
+    "displayCurrency": "KHR",
+    "passed": true,
+    "runnerSeconds": 26.1,
+    "revision": 7,
+    "actions": 5,
+    "auditEvents": 6,
+    "approvedReceipts": 1,
+    "receiptHash": "26db2274626d311c42d85b3b78d6da58c0223f8bb3a00df018360a6a8282ffe3",
+    "exactStateRestored": true,
+    "preferencesRestored": true,
+    "extraction": {
+      "supplier": "Supplier B",
+      "summary": "Supplier B reported that Thursday's delivery will be delayed by approximately 48 hours due to vehicle breakdown and warehouse congestion, affecting 2 routes in Dhaka North and Gazipur. Thursday's demand can only be partially met, and capacity for replacement supply has not yet been confirmed.",
+      "confidence": 0.95,
+      "evidence_quotes": {
+        "delay_hours": "យឺតប្រហែល 48 ម៉ោង",
+        "affected_routes": "ផ្លូវដឹកជញ្ជូនចំនួន 2 ផ្លូវ",
+        "capacity_confirmed": null
+      },
+      "delay_hours": 48,
+      "affected_routes": 2,
+      "capacity_confirmed": null
+    },
+    "canonicalPlan": {
+      "transfer_cases": 90,
+      "supplier_b_cases": 120,
+      "emergency_cases": 60,
+      "cash_required_bdt": 186000,
+      "expected_stockout_cases": 30
+    },
+    "exportedAt": "2026-10-17T05:10:08.111Z"
+  }
+]

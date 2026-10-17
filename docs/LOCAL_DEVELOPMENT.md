@@ -43,3 +43,7 @@ Verification: 101 Node tests and 18 browser tests passed; 6 live/capture browser
 The local configuration loads before App Check and the reCAPTCHA error is replaced by the expected unregistered-token HTTP 403. Both the App Check registration API and project metadata access deny `bunchay1280@gmail.com` with permission errors. The device token is ready locally, but owner registration/access remains required; live Gemini and saving are not yet verified locally.
 
 Reference: [Firebase App Check debug provider](https://firebase.google.com/docs/app-check/web/debug-provider).
+
+## Static browser-test mode
+
+`PORT=4173 STATIC_ONLY=1 node scripts/local-server.mjs` serves the unmodified production entry for CI/browser tests. It creates no private device token and returns 404 from `/__local/appcheck.js`. Normal `npm run dev` retains the registered private-device setup. Static-mode tests do not establish live Firebase/App Check availability; use the dedicated live test on the registered development server for that.

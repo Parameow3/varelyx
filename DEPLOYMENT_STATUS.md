@@ -1,5 +1,41 @@
 # Varelyx Deployment Status
 
+## October 17, 2026: final compact UI review candidate
+
+The light compact workspace, English/Bangla/Khmer copy, USD/BDT/KHR display and start/resume guidance are prepared for PR #7 review. Fresh preflight passed syntax, 128 Node tests, 13 Python reference tests and 72 responsive browser cases (8 gated cases skipped). The separate CI-equivalent static Node-server run also passed all 72 applicable browser cases; it avoids reproduced parallel module-download resets from the Python test server and never creates/serves an App Check token. Review screenshots and scope are in `docs/PR7_UI_REVIEW_2026-10-17.md`. Production remains unchanged; merge/release and fresh production-host QA require owner review. Shared decisions remain postponed. Central portfolio/Linear tracking is owner-side pending (standard repository HTTP 404).
+
+## October 17, 2026: clear starting point and saved-session resume (local)
+
+Added compact state-aware guidance in English, Bangla and Khmer, a clear new-user starting action, root-link resume at the next verified stage, and Saved/Audit/New decision choices for completed work. New decision preserves receipts through the existing explicit confirmation flow. Browser-private demo scope is explained. Syntax, 127 Node checks, 68 existing responsive cases and four final new/resume cases passed. A fresh real Gemini/Firebase full flow plus exact reload and root-link resume passed in 14.1 seconds. See `docs/JOURNEY_UX_QA_2026-10-17.md` for evidence and corrected test timing/navigation assertions. No push, merge or deployment; central portfolio/Linear synchronization remains owner-side pending (standard repository HTTP 404).
+
+## October 17, 2026: Bangla/Khmer labels made consistent (local)
+
+Filled missing Bangla and Khmer copy across navigation, tables, proof, actions, audit, help, dialogs, accessible labels, currency controls and known runtime statuses/errors. Original supplier text, quotes and canonical saved data are preserved. Syntax, 115 Node checks, the 60-case responsive suite (8 gated cases skipped) and 16 targeted locale/error cases passed. Fresh native-input Bangla and Khmer live Gemini → proof → approval → five saved actions → revision-7 read-back → exact reload restoration passed. See `docs/LOCALIZATION_QA_2026-10-17.md`. Earlier notes about Bangla fallback labels describe the preceding snapshot. Local only; central tracking remains owner-side pending (standard repository HTTP 404).
+
+## October 17, 2026: full live demo with three selected UI languages (local)
+
+Fresh independent sessions with English/USD, Bangla/BDT and Khmer/KHR UI and matching supplier samples each passed real Gemini → HOLD/review → PASS/BLOCK/PASS → human approval → five sandbox actions → revision-7 Firebase read-back → exact reload restoration, retaining language/currency preferences. Actual Plan, Proof, Saved and Audit summaries were checked. Syntax and 110 Node checks passed. The initial English reload had a network failure; a diagnostic rerun passed without product changes. A Khmer test-label expectation was corrected. Some Bangla labels remain English fallbacks. See `docs/TRILINGUAL_LIVE_QA_2026-10-17.md` and its raw exports. No push, merge or deployment. Central portfolio/Linear synchronization remains owner-side pending (standard repository HTTP 404).
+
+## October 17, 2026: balanced summaries on later steps (local)
+
+Plan, Verify/Approve, Saved Actions and Audit now combine short context with real state/policy summary cards. Longer explanations remain in question-mark help. Summaries distinguish unknown/zero/stale capacity, current blockers, approved receipt counts and verified session read-back. All three languages and responsive layouts are retained. Syntax, 110 Node checks and 52 responsive browser cases passed, including full isolated approval/save/reload and summary-state assertions. See `docs/STITCH_LOCAL_IMPLEMENTATION_2026-10-17.md`. No push, merge or deployment.
+
+## October 17, 2026: opening-page guidance cards (local)
+
+Added a concise input-tip row and three “What happens next” cards to balance the minimal Evidence screen. These instructions are translated into all three languages, stack on mobile and give way to real facts/capacity review after analysis. Longer explanations remain behind question icons. Syntax, 110 Node and 52 responsive browser checks passed; business logic and saving were unchanged. See `docs/STITCH_LOCAL_IMPLEMENTATION_2026-10-17.md`. No push, merge or deployment.
+
+## October 17, 2026: minimal steps with contextual help (local)
+
+Evidence begins with a single editor and Analyze action; extracted facts and capacity review appear after analysis. All steps reduce repeated explanations to section question-mark help, available by hover, keyboard focus and tap. Actions, amounts, proof results, short blocker labels and save/error feedback remain visible. Syntax, 110 Node and 52 applicable responsive browser checks passed. The fresh real Khmer-sample Gemini → proof → approval → verified save → exact reload run passed in 24.1 seconds (five actions, revision 7). Evidence and scope: `docs/STITCH_LOCAL_IMPLEMENTATION_2026-10-17.md`, `docs/evidence/2026-10-17/minimal-help/`. Local only; no push, merge or deployment.
+
+## October 17, 2026: local header and multilingual demo refinement
+
+Language flags, currency symbols/icon, a proposed SVG Varelyx logo/favicon, and equivalent English/Bangla/Khmer sample messages are implemented locally. Untouched samples follow the locale; custom and analyzed evidence is preserved. SVG serving and the mobile rates-panel layout are corrected. Syntax, 110 Node tests and 48 applicable responsive browser cases passed. Fresh real-service Khmer and Bangla samples each passed AI → HOLD/review → PASS/BLOCK/PASS → approval → five saved actions → revision-7 Firebase read-back → exact reload restoration. See `docs/STITCH_LOCAL_IMPLEMENTATION_2026-10-17.md` and `docs/evidence/2026-10-17/localized-demo/`. No push, merge or deployment.
+
+## October 17, 2026: compact Stitch implementation in local review
+
+The light/cobalt design now uses focused workflow views, a collapsible white sidebar/mobile drawer, compact plan/proof/action tables and consistent type/spacing. Khmer UI and USD/BDT/KHR display currency are included, with editable dated reference rates and original BDT proof amounts preserved. Syntax, 105 Node and 44 responsive browser checks passed. The fresh real Gemini/Firebase flow passed: PASS/BLOCK/PASS, explicit approval, five sandbox actions, verified revision-7 saving and exact reload restoration. See `docs/STITCH_LOCAL_IMPLEMENTATION_2026-10-17.md`. This implementation remains local; PR #7 still contains the previously pushed candidate. No merge or deployment was performed.
+
 ## October 17, 2026: local candidate live-service verification passed
 
 The project owner registered the private local App Check token. The candidate based on `2499f48`, served locally against real Gemini/Firebase, passed HOLD → review → PASS → BLOCK (approval disabled) → PASS → human approval → verified save → reload. Exact exported state, capacity 120, receipt, five sandbox actions, audit and proof history matched after reload. See `docs/LIVE_QA_2026-10-17.md` for fresh evidence and exports. PR #7 awaits owner review; no merge or production deployment was performed. Earlier registration/live-pending notes below are historical.

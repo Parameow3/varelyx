@@ -1,0 +1,408 @@
+{
+  "exportedAt": "2026-10-17T05:21:58.518Z",
+  "scope": "Controlled simulation. Not retailer outcomes or external dispatch.",
+  "backendReadBack": {
+    "revision": 7,
+    "restoredFromServer": true,
+    "verified": true
+  },
+  "state": {
+    "schemaVersion": 2,
+    "runId": "3f760eb1-b197-47c2-968a-09bee6604cca",
+    "source": "Supplier B បានជូនដំណឹងថា ការដឹកជញ្ជូនថ្ងៃព្រហស្បតិ៍នឹងយឺតប្រហែល 48 ម៉ោង ដោយសាររថយន្តខូច និងការកកស្ទះនៅឃ្លាំង។ ការយឺតនេះប៉ះពាល់ដល់ផ្លូវដឹកជញ្ជូនចំនួន 2 ផ្លូវ សម្រាប់តំបន់ Dhaka North និង Gazipur។ ស្តុកបច្ចុប្បន្នអាចបំពេញតម្រូវការថ្ងៃព្រហស្បតិ៍បានតែមួយផ្នែក។ Supplier B មិនទាន់បញ្ជាក់បរិមាណជំនួសដែលអាចផ្គត់ផ្គង់នៅថ្ងៃព្រហស្បតិ៍បានទេ។ មុនអនុម័តការផ្គត់ផ្គង់បន្ថែម ក្រុមប្រតិបត្តិការត្រូវវាយតម្លៃការផ្ទេររវាងហាង ការផ្គត់ផ្គង់បន្ទាន់ និងកម្រិតថវិកា។",
+    "extraction": {
+      "supplier": "Supplier B",
+      "summary": "Supplier B reported that Thursday's delivery will be delayed by approximately 48 hours due to vehicle breakdown and warehouse congestion, affecting 2 routes in Dhaka North and Gazipur. Thursday's demand can only be partially met, and capacity has not yet been confirmed.",
+      "confidence": 0.95,
+      "evidence_quotes": {
+        "delay_hours": "ការដឹកជញ្ជូនថ្ងៃព្រហស្បតិ៍នឹងយឺតប្រហែល 48 ម៉ោង",
+        "affected_routes": "ប៉ះពាល់ដល់ផ្លូវដឹកជញ្ជូនចំនួន 2 ផ្លូវ",
+        "capacity_confirmed": null
+      },
+      "delay_hours": 48,
+      "affected_routes": 2,
+      "capacity_confirmed": null
+    },
+    "liveVerified": true,
+    "evidenceReviewed": true,
+    "supplierCapacity": 120,
+    "confirmedAt": "2026-10-17T05:21:43.121Z",
+    "phase": "APPROVED_SANDBOX",
+    "proof": {
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "Reviewed live evidence",
+          "status": "PASS",
+          "detail": "Evidence reviewed by operator"
+        },
+        {
+          "name": "Nonnegative integer quantities",
+          "status": "PASS",
+          "detail": "All quantities and cash must be finite nonnegative integers"
+        },
+        {
+          "name": "Cash recomputation and ceiling",
+          "status": "PASS",
+          "detail": "Recomputed cash must match the plan and be at most BDT 240000"
+        },
+        {
+          "name": "Supplier capacity",
+          "status": "PASS",
+          "detail": "Cannot exceed operator-confirmed capacity"
+        },
+        {
+          "name": "Donor safety stock",
+          "status": "PASS",
+          "detail": "Maximum 90 cases"
+        },
+        {
+          "name": "Route capacity",
+          "status": "PASS",
+          "detail": "Controlled route policy applied to extracted route count"
+        },
+        {
+          "name": "Emergency supplier capacity",
+          "status": "PASS",
+          "detail": "Maximum 100 cases"
+        },
+        {
+          "name": "MOQ and pack size",
+          "status": "PASS",
+          "detail": "Supplier MOQ 50; pack size 10"
+        }
+      ],
+      "strategy_id": "balanced",
+      "receipt_hash": "c4277dbc2514e77e7cb0962ee2fe6bb0da1353741e154c2fab6f2650f75e5423",
+      "payload": {
+        "policy": {
+          "version": "simulation-v2",
+          "pack": 10,
+          "starting": 150,
+          "donor": 90,
+          "emergency": 100,
+          "cash": 240000,
+          "supplierCost": 820,
+          "emergencyCost": 1280,
+          "transferCost": 120,
+          "moq": 50,
+          "maxCapacity": 10000,
+          "demand": [
+            380,
+            420,
+            460,
+            500
+          ]
+        },
+        "runId": "3f760eb1-b197-47c2-968a-09bee6604cca",
+        "plan": {
+          "id": "balanced",
+          "name": "Balanced robust",
+          "transfer_cases": 90,
+          "supplier_b_cases": 120,
+          "emergency_cases": 60,
+          "cash_required_bdt": 186000,
+          "shortage_cases": 0,
+          "expected_stockout_cases": 30,
+          "robustness_pct": 50
+        },
+        "source": "Supplier B បានជូនដំណឹងថា ការដឹកជញ្ជូនថ្ងៃព្រហស្បតិ៍នឹងយឺតប្រហែល 48 ម៉ោង ដោយសាររថយន្តខូច និងការកកស្ទះនៅឃ្លាំង។ ការយឺតនេះប៉ះពាល់ដល់ផ្លូវដឹកជញ្ជូនចំនួន 2 ផ្លូវ សម្រាប់តំបន់ Dhaka North និង Gazipur។ ស្តុកបច្ចុប្បន្នអាចបំពេញតម្រូវការថ្ងៃព្រហស្បតិ៍បានតែមួយផ្នែក។ Supplier B មិនទាន់បញ្ជាក់បរិមាណជំនួសដែលអាចផ្គត់ផ្គង់នៅថ្ងៃព្រហស្បតិ៍បានទេ។ មុនអនុម័តការផ្គត់ផ្គង់បន្ថែម ក្រុមប្រតិបត្តិការត្រូវវាយតម្លៃការផ្ទេររវាងហាង ការផ្គត់ផ្គង់បន្ទាន់ និងកម្រិតថវិកា។",
+        "extraction": {
+          "supplier": "Supplier B",
+          "summary": "Supplier B reported that Thursday's delivery will be delayed by approximately 48 hours due to vehicle breakdown and warehouse congestion, affecting 2 routes in Dhaka North and Gazipur. Thursday's demand can only be partially met, and capacity has not yet been confirmed.",
+          "confidence": 0.95,
+          "evidence_quotes": {
+            "delay_hours": "ការដឹកជញ្ជូនថ្ងៃព្រហស្បតិ៍នឹងយឺតប្រហែល 48 ម៉ោង",
+            "affected_routes": "ប៉ះពាល់ដល់ផ្លូវដឹកជញ្ជូនចំនួន 2 ផ្លូវ",
+            "capacity_confirmed": null
+          },
+          "delay_hours": 48,
+          "affected_routes": 2,
+          "capacity_confirmed": null
+        },
+        "confirmedCapacity": 120,
+        "evidenceReviewed": true,
+        "liveVerified": true,
+        "checks": [
+          {
+            "name": "Reviewed live evidence",
+            "status": "PASS",
+            "detail": "Evidence reviewed by operator"
+          },
+          {
+            "name": "Nonnegative integer quantities",
+            "status": "PASS",
+            "detail": "All quantities and cash must be finite nonnegative integers"
+          },
+          {
+            "name": "Cash recomputation and ceiling",
+            "status": "PASS",
+            "detail": "Recomputed cash must match the plan and be at most BDT 240000"
+          },
+          {
+            "name": "Supplier capacity",
+            "status": "PASS",
+            "detail": "Cannot exceed operator-confirmed capacity"
+          },
+          {
+            "name": "Donor safety stock",
+            "status": "PASS",
+            "detail": "Maximum 90 cases"
+          },
+          {
+            "name": "Route capacity",
+            "status": "PASS",
+            "detail": "Controlled route policy applied to extracted route count"
+          },
+          {
+            "name": "Emergency supplier capacity",
+            "status": "PASS",
+            "detail": "Maximum 100 cases"
+          },
+          {
+            "name": "MOQ and pack size",
+            "status": "PASS",
+            "detail": "Supplier MOQ 50; pack size 10"
+          }
+        ]
+      },
+      "created_at": "2026-10-17T05:21:52.605Z"
+    },
+    "actions": [
+      {
+        "id": "c4277dbc2514e77e7cb0-0",
+        "type": "TRANSFER_ORDER",
+        "payload": {
+          "cases": 90
+        },
+        "receipt_hash": "c4277dbc2514e77e7cb0962ee2fe6bb0da1353741e154c2fab6f2650f75e5423",
+        "status": "APPROVED_SANDBOX",
+        "created_at": "2026-10-17T05:21:52.605Z"
+      },
+      {
+        "id": "c4277dbc2514e77e7cb0-1",
+        "type": "PURCHASE_ORDER_DRAFT",
+        "payload": {
+          "supplier": "Supplier B",
+          "cases": 120
+        },
+        "receipt_hash": "c4277dbc2514e77e7cb0962ee2fe6bb0da1353741e154c2fab6f2650f75e5423",
+        "status": "APPROVED_SANDBOX",
+        "created_at": "2026-10-17T05:21:52.605Z"
+      },
+      {
+        "id": "c4277dbc2514e77e7cb0-2",
+        "type": "PURCHASE_ORDER_DRAFT",
+        "payload": {
+          "supplier": "Emergency Supplier C",
+          "cases": 60
+        },
+        "receipt_hash": "c4277dbc2514e77e7cb0962ee2fe6bb0da1353741e154c2fab6f2650f75e5423",
+        "status": "APPROVED_SANDBOX",
+        "created_at": "2026-10-17T05:21:52.605Z"
+      },
+      {
+        "id": "c4277dbc2514e77e7cb0-3",
+        "type": "SUPPLIER_ESCALATION",
+        "payload": {
+          "supplier": "Supplier B",
+          "delay_hours": 48
+        },
+        "receipt_hash": "c4277dbc2514e77e7cb0962ee2fe6bb0da1353741e154c2fab6f2650f75e5423",
+        "status": "APPROVED_SANDBOX",
+        "created_at": "2026-10-17T05:21:52.605Z"
+      },
+      {
+        "id": "c4277dbc2514e77e7cb0-4",
+        "type": "MANAGER_TASK",
+        "payload": {
+          "task": "Review sandbox action records; no external order has been sent"
+        },
+        "receipt_hash": "c4277dbc2514e77e7cb0962ee2fe6bb0da1353741e154c2fab6f2650f75e5423",
+        "status": "APPROVED_SANDBOX",
+        "created_at": "2026-10-17T05:21:52.605Z"
+      }
+    ],
+    "archive": [],
+    "receipts": {
+      "c4277dbc2514e77e7cb0962ee2fe6bb0da1353741e154c2fab6f2650f75e5423": {
+        "status": "PASS",
+        "checks": [
+          {
+            "name": "Reviewed live evidence",
+            "status": "PASS",
+            "detail": "Evidence reviewed by operator"
+          },
+          {
+            "name": "Nonnegative integer quantities",
+            "status": "PASS",
+            "detail": "All quantities and cash must be finite nonnegative integers"
+          },
+          {
+            "name": "Cash recomputation and ceiling",
+            "status": "PASS",
+            "detail": "Recomputed cash must match the plan and be at most BDT 240000"
+          },
+          {
+            "name": "Supplier capacity",
+            "status": "PASS",
+            "detail": "Cannot exceed operator-confirmed capacity"
+          },
+          {
+            "name": "Donor safety stock",
+            "status": "PASS",
+            "detail": "Maximum 90 cases"
+          },
+          {
+            "name": "Route capacity",
+            "status": "PASS",
+            "detail": "Controlled route policy applied to extracted route count"
+          },
+          {
+            "name": "Emergency supplier capacity",
+            "status": "PASS",
+            "detail": "Maximum 100 cases"
+          },
+          {
+            "name": "MOQ and pack size",
+            "status": "PASS",
+            "detail": "Supplier MOQ 50; pack size 10"
+          }
+        ],
+        "strategy_id": "balanced",
+        "receipt_hash": "c4277dbc2514e77e7cb0962ee2fe6bb0da1353741e154c2fab6f2650f75e5423",
+        "payload": {
+          "policy": {
+            "version": "simulation-v2",
+            "pack": 10,
+            "starting": 150,
+            "donor": 90,
+            "emergency": 100,
+            "cash": 240000,
+            "supplierCost": 820,
+            "emergencyCost": 1280,
+            "transferCost": 120,
+            "moq": 50,
+            "maxCapacity": 10000,
+            "demand": [
+              380,
+              420,
+              460,
+              500
+            ]
+          },
+          "runId": "3f760eb1-b197-47c2-968a-09bee6604cca",
+          "plan": {
+            "id": "balanced",
+            "name": "Balanced robust",
+            "transfer_cases": 90,
+            "supplier_b_cases": 120,
+            "emergency_cases": 60,
+            "cash_required_bdt": 186000,
+            "shortage_cases": 0,
+            "expected_stockout_cases": 30,
+            "robustness_pct": 50
+          },
+          "source": "Supplier B បានជូនដំណឹងថា ការដឹកជញ្ជូនថ្ងៃព្រហស្បតិ៍នឹងយឺតប្រហែល 48 ម៉ោង ដោយសាររថយន្តខូច និងការកកស្ទះនៅឃ្លាំង។ ការយឺតនេះប៉ះពាល់ដល់ផ្លូវដឹកជញ្ជូនចំនួន 2 ផ្លូវ សម្រាប់តំបន់ Dhaka North និង Gazipur។ ស្តុកបច្ចុប្បន្នអាចបំពេញតម្រូវការថ្ងៃព្រហស្បតិ៍បានតែមួយផ្នែក។ Supplier B មិនទាន់បញ្ជាក់បរិមាណជំនួសដែលអាចផ្គត់ផ្គង់នៅថ្ងៃព្រហស្បតិ៍បានទេ។ មុនអនុម័តការផ្គត់ផ្គង់បន្ថែម ក្រុមប្រតិបត្តិការត្រូវវាយតម្លៃការផ្ទេររវាងហាង ការផ្គត់ផ្គង់បន្ទាន់ និងកម្រិតថវិកា។",
+          "extraction": {
+            "supplier": "Supplier B",
+            "summary": "Supplier B reported that Thursday's delivery will be delayed by approximately 48 hours due to vehicle breakdown and warehouse congestion, affecting 2 routes in Dhaka North and Gazipur. Thursday's demand can only be partially met, and capacity has not yet been confirmed.",
+            "confidence": 0.95,
+            "evidence_quotes": {
+              "delay_hours": "ការដឹកជញ្ជូនថ្ងៃព្រហស្បតិ៍នឹងយឺតប្រហែល 48 ម៉ោង",
+              "affected_routes": "ប៉ះពាល់ដល់ផ្លូវដឹកជញ្ជូនចំនួន 2 ផ្លូវ",
+              "capacity_confirmed": null
+            },
+            "delay_hours": 48,
+            "affected_routes": 2,
+            "capacity_confirmed": null
+          },
+          "confirmedCapacity": 120,
+          "evidenceReviewed": true,
+          "liveVerified": true,
+          "checks": [
+            {
+              "name": "Reviewed live evidence",
+              "status": "PASS",
+              "detail": "Evidence reviewed by operator"
+            },
+            {
+              "name": "Nonnegative integer quantities",
+              "status": "PASS",
+              "detail": "All quantities and cash must be finite nonnegative integers"
+            },
+            {
+              "name": "Cash recomputation and ceiling",
+              "status": "PASS",
+              "detail": "Recomputed cash must match the plan and be at most BDT 240000"
+            },
+            {
+              "name": "Supplier capacity",
+              "status": "PASS",
+              "detail": "Cannot exceed operator-confirmed capacity"
+            },
+            {
+              "name": "Donor safety stock",
+              "status": "PASS",
+              "detail": "Maximum 90 cases"
+            },
+            {
+              "name": "Route capacity",
+              "status": "PASS",
+              "detail": "Controlled route policy applied to extracted route count"
+            },
+            {
+              "name": "Emergency supplier capacity",
+              "status": "PASS",
+              "detail": "Maximum 100 cases"
+            },
+            {
+              "name": "MOQ and pack size",
+              "status": "PASS",
+              "detail": "Supplier MOQ 50; pack size 10"
+            }
+          ]
+        },
+        "created_at": "2026-10-17T05:21:52.605Z"
+      }
+    },
+    "audit": [
+      {
+        "event": "LIVE_EVIDENCE_EXTRACTED",
+        "at": "2026-10-17T05:21:38.498Z"
+      },
+      {
+        "event": "OPERATOR_EVIDENCE_CONFIRMED",
+        "capacity": 120,
+        "at": "2026-10-17T05:21:43.121Z"
+      },
+      {
+        "event": "PROOF_GENERATED",
+        "status": "PASS",
+        "strategy_id": "balanced",
+        "receipt_hash": "c4277dbc2514e77e7cb0962ee2fe6bb0da1353741e154c2fab6f2650f75e5423",
+        "at": "2026-10-17T05:21:46.992Z"
+      },
+      {
+        "event": "PROOF_GENERATED",
+        "status": "BLOCK",
+        "strategy_id": "unverified-aggressive",
+        "receipt_hash": "21975b1987178b6b27c5283cddf8279ee1cf692795c449b4c915a543966852ce",
+        "at": "2026-10-17T05:21:47.875Z"
+      },
+      {
+        "event": "PROOF_GENERATED",
+        "status": "PASS",
+        "strategy_id": "balanced",
+        "receipt_hash": "c4277dbc2514e77e7cb0962ee2fe6bb0da1353741e154c2fab6f2650f75e5423",
+        "at": "2026-10-17T05:21:50.709Z"
+      },
+      {
+        "event": "APPROVAL_PREPARED",
+        "receipt_hash": "c4277dbc2514e77e7cb0962ee2fe6bb0da1353741e154c2fab6f2650f75e5423",
+        "at": "2026-10-17T05:21:52.605Z"
+      }
+    ],
+    "extractionValidationVersion": 1
+  }
+}

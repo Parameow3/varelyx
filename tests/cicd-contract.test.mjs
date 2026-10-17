@@ -8,7 +8,7 @@ test('Playwright covers required viewports and safety checks', async()=>{
   const config=await read('playwright.config.mjs');
   const smoke=await read('tests/e2e/smoke.spec.mjs');
   for(const size of ['1440','1280','390']) assert.match(config,new RegExp(size));
-  for(const text of ['Command Center','KNOW','ASK','DECIDE','PROVE','ACT','Human authorization','Controlled simulation']) assert.match(smoke,new RegExp(text,'i'));
+  for(const text of ['Review supplier evidence','workflow-tabs','capacityInput','Controlled simulation']) assert.match(smoke,new RegExp(text,'i'));
   assert.match(smoke,/scrollWidth/);
   assert.match(smoke,/pageerror/);
   assert.match(smoke,/console/);
@@ -21,4 +21,5 @@ test('CI runs complete Node Python and browser verification', async()=>{
   assert.match(ci,/pytest -q/);
   assert.match(ci,/playwright install.*chromium/);
   assert.match(ci,/test:e2e/);
+  assert.match(ci,/STATIC_ONLY=1 node scripts\/local-server\.mjs/);
 });

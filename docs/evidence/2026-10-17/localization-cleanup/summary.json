@@ -1,0 +1,24 @@
+[
+  {
+    "locale": "bn",
+    "result": "PASS",
+    "runnerSeconds": 34.5,
+    "actions": 5,
+    "revision": 7,
+    "exactStateRestored": true,
+    "receiptHash": "2d3cb65070935180e1affe6d84544020f9946d60c5133852b7f2cf90cc651ee5",
+    "failedServiceRequests": [],
+    "exportedAt": "2026-10-17T05:21:14.212Z"
+  },
+  {
+    "locale": "km",
+    "result": "PASS",
+    "runnerSeconds": 39.4,
+    "actions": 5,
+    "revision": 7,
+    "exactStateRestored": true,
+    "receiptHash": "c4277dbc2514e77e7cb0962ee2fe6bb0da1353741e154c2fab6f2650f75e5423",
+    "failedServiceRequests": [],
+    "exportedAt": "2026-10-17T05:21:56.973Z"
+  }
+]

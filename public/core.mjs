@@ -62,7 +62,7 @@ export function strategies(capacity, affectedRoutes) {
     {id: 'balanced', name: 'Balanced robust', ...solve(cap, route, 2500, 80, 420)},
     {id: 'max-availability', name: 'Maximum availability', ...solve(cap, route, 10000, 0, 500)}];
 }
-const normalize = s => String(s).replace(/[\u09e6-\u09ef]/g, c => String(c.charCodeAt(0) - 0x09e6)).replace(/\s+/g, ' ').trim().toLowerCase();
+const normalize = s => String(s).replace(/[\u09e6-\u09ef]/g, c => String(c.charCodeAt(0) - 0x09e6)).replace(/[\u17e0-\u17e9]/g,c=>String(c.charCodeAt(0)-0x17e0)).replace(/\s+/g, ' ').trim().toLowerCase();
 export const EXTRACTION_SCHEMA = {type: 'object', properties: {
   delay_hours: {type: ['integer', 'null']}, affected_routes: {type: ['integer', 'null']},
   supplier: {type: ['string', 'null']}, capacity_confirmed: {type: ['integer', 'null']},
@@ -76,15 +76,15 @@ export const EXTRACTION_SCHEMA = {type: 'object', properties: {
 // Unknown units or ambiguous/negated clauses must be clarified and reviewed.
 function fieldSupportsNumber(key, value, quote) {
   const text = normalize(quote);
-  const units = key === 'delay_hours' ? '(hours?|hrs?|days?|din|ঘণ্টা|ঘন্টা|দিন)'
-    : key === 'affected_routes' ? '((?:(?:distribution|delivery)\\s+)?routes?|রুট)' : '(cases?|কেস)';
-  const pair = new RegExp('(?<![\\d.\\-])([0-9]+)(?:টি|টা|ta)?[\\s-]*'+units+'(?![a-z\\u0980-\\u09ff])', 'g');
-  const values = [...text.matchAll(pair)].map(match => key === 'delay_hours' && /^(days?|din|দিন)$/.test(match[2]) ? Number(match[1])*24 : Number(match[1]));
+  const units = key === 'delay_hours' ? '(hours?|hrs?|days?|din|ঘণ্টা|ঘন্টা|দিন|ម៉ោង|ថ្ងៃ)'
+    : key === 'affected_routes' ? '((?:(?:distribution|delivery)\\s+)?routes?|রুট|ផ្លូវ)' : '(cases?|কেস|កេស)';
+  const pair = new RegExp('(?<![\\d.\\-])([0-9]+)(?:টি|টা|ta)?[\\s-]*'+units+'(?![a-z\\u0980-\\u09ff\\u1780-\\u17ff])', 'g');
+  const values = [...text.matchAll(pair)].map(match => key === 'delay_hours' && /^(days?|din|দিন|ថ្ងៃ)$/.test(match[2]) ? Number(match[1])*24 : Number(match[1]));
   if (!values.includes(value)) return false;
-  if (/\b(?:not|unconfirmed|unknown|maybe|between|or)\b|অনিশ্চিত|অজানা|নয়|নেই|হয়নি|নিশ্চিত নয়/.test(text)) return false;
-  if (key === 'capacity_confirmed' && /\b(?:approximately|about)\b/.test(text)) return false;
-  if (key === 'delay_hours' && !/\b(?:late|delay(?:ed)?|deri)\b|দেরি|বিলম্ব/.test(text)) return false;
-  if (key === 'capacity_confirmed' && !/\b(?:capacity|maximum|max|can supply|can deliver)\b|ক্ষমতা|সরবরাহ করতে পার/.test(text)) return false;
+  if (/\b(?:not|unconfirmed|unknown|maybe|between|or)\b|অনিশ্চিত|অজানা|নয়|নেই|হয়নি|নিশ্চিত নয়|មិន|អត់|មិនដឹង|ចន្លោះ|ឬ/.test(text)) return false;
+  if (key === 'capacity_confirmed' && /\b(?:approximately|about)\b|ប្រហែល/.test(text)) return false;
+  if (key === 'delay_hours' && !/\b(?:late|delay(?:ed)?|deri)\b|দেরি|বিলম্ব|យឺត|ពន្យារ/.test(text)) return false;
+  if (key === 'capacity_confirmed' && !/\b(?:capacity|maximum|max|can supply|can deliver)\b|ক্ষমতা|সরবরাহ করতে পার|បរិមាណ|សមត្ថភាព|អាចផ្គត់ផ្គង់|អាចដឹក/.test(text)) return false;
   // Multiple different values for the same unit in one quote are ambiguous.
   return new Set(values).size === 1;
 }
@@ -103,7 +103,7 @@ export function validateExtraction(raw, source, {checkFieldUnits = true} = {}) {
     if (value !== null) {
       if (typeof quote !== 'string' || !quote.trim() || !normalize(source).includes(normalize(quote))) throw Error('Ungrounded source: ' + key);
       const numbers = normalize(quote).match(/\d+/g)?.map(Number) || [];
-      const days = key === 'delay_hours' && /days?|din|\u09a6\u09bf\u09a8/.test(normalize(quote));
+      const days = key === 'delay_hours' && /days?|din|\u09a6\u09bf\u09a8|ថ្ងៃ/.test(normalize(quote));
       if (!numbers.includes(value) && !(days && numbers.some(n => n * 24 === value))) throw Error('Unsupported number: ' + key);
       if (checkFieldUnits && !fieldSupportsNumber(key, value, quote)) throw Error('Unsupported field/unit or ambiguous source: ' + key + '. Clarify the supplier message and analyze again.');
     }
