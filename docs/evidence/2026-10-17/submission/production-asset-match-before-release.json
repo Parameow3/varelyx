@@ -1,0 +1,136 @@
+{
+  "url": "https://varelyx-ai-builder-cup.web.app/",
+  "checkedAt": "2026-10-17T08:44:37.057Z",
+  "assetCount": 18,
+  "exactAssetMatch": false,
+  "liveServicesVerified": false,
+  "scope": "Static bytes only. Separately verify normal-browser App Check, live Gemini, approval, Firebase read-back and reload.",
+  "results": [
+    {
+      "path": "analytics.mjs",
+      "status": "match",
+      "httpStatus": 200,
+      "expected": "1fe4077e819b524984f377af4eee7c2ef850abfd870d151166b9e0ab06648890",
+      "actual": "1fe4077e819b524984f377af4eee7c2ef850abfd870d151166b9e0ab06648890"
+    },
+    {
+      "path": "app.js",
+      "status": "mismatch",
+      "httpStatus": 200,
+      "expected": "c7713fbd87dc4114b53f2b464e035cbc961bbe01c88c3c7d0ed269ea8e888032",
+      "actual": "74cfc93c798a6c37312d652afdfad4ec652ab1cd88f5002d911ab5d45b64188b"
+    },
+    {
+      "path": "assets/varelyx-mark.svg",
+      "status": "mismatch",
+      "httpStatus": 200,
+      "expected": "033b28580fc0454b48e282cf7548eae97f9e6de4d76fffc2082c6ba942be64a1",
+      "actual": "c891fd91f70485752c9ac31687f2a57471c37b53ee54be51e9b4f43dc2680e06"
+    },
+    {
+      "path": "bangla.mjs",
+      "status": "mismatch",
+      "httpStatus": 200,
+      "expected": "d63f671054986f7b28b1b99db78ff09321fce6982980a04e1d1c6073219c57dd",
+      "actual": "c891fd91f70485752c9ac31687f2a57471c37b53ee54be51e9b4f43dc2680e06"
+    },
+    {
+      "path": "context-help.mjs",
+      "status": "mismatch",
+      "httpStatus": 200,
+      "expected": "5b60dd9ded822f4e4e323357cae5fd3f49e580a3242c0550868d33e8751cf2f1",
+      "actual": "c891fd91f70485752c9ac31687f2a57471c37b53ee54be51e9b4f43dc2680e06"
+    },
+    {
+      "path": "core.mjs",
+      "status": "mismatch",
+      "httpStatus": 200,
+      "expected": "af1888a2409f2edd89fb0bf2a116d8352fc48f121abf7b6fbfb1b6e5a01ff795",
+      "actual": "e979cdb54d89d790af32d9deb2be8e8fc345ff7730f5e7998a0c1af0f530aa1a"
+    },
+    {
+      "path": "currency.mjs",
+      "status": "mismatch",
+      "httpStatus": 200,
+      "expected": "d846291a34e76dc103e912567593eaf0eb202fa4cc91e7e8efb36bf0f19110b8",
+      "actual": "c891fd91f70485752c9ac31687f2a57471c37b53ee54be51e9b4f43dc2680e06"
+    },
+    {
+      "path": "demo-signals.mjs",
+      "status": "mismatch",
+      "httpStatus": 200,
+      "expected": "23574a505b7fa0a8d8e7795eee27caebe771cafb84414dbf326d44f2fe35710b",
+      "actual": "c891fd91f70485752c9ac31687f2a57471c37b53ee54be51e9b4f43dc2680e06"
+    },
+    {
+      "path": "firebase-config.js",
+      "status": "match",
+      "httpStatus": 200,
+      "expected": "4e83c70922cd909417597752d6fd2f58bc9cb60c2d7c233c84f8d35785c3a48f",
+      "actual": "4e83c70922cd909417597752d6fd2f58bc9cb60c2d7c233c84f8d35785c3a48f"
+    },
+    {
+      "path": "firebase-transport.mjs",
+      "status": "match",
+      "httpStatus": 200,
+      "expected": "ecfbaeaf4734c8eec471568169b01896d7eab1e1d53907823649da4a9c8aaa50",
+      "actual": "ecfbaeaf4734c8eec471568169b01896d7eab1e1d53907823649da4a9c8aaa50"
+    },
+    {
+      "path": "i18n.mjs",
+      "status": "mismatch",
+      "httpStatus": 200,
+      "expected": "ad3f78df6707f813439743a7775c96af6b6a03bef721480c235143133fad6df7",
+      "actual": "72a99af08918e33fad92859eba6204314a89dd7bf7dabcc906282b58f716648e"
+    },
+    {
+      "path": "index.html",
+      "status": "mismatch",
+      "httpStatus": 200,
+      "expected": "8a319d786f90fcc2d0e8cc53609fb93fdce182568e63fadd90e1c4045124e938",
+      "actual": "c891fd91f70485752c9ac31687f2a57471c37b53ee54be51e9b4f43dc2680e06"
+    },
+    {
+      "path": "journey.mjs",
+      "status": "mismatch",
+      "httpStatus": 200,
+      "expected": "629b4db1bd42ebb1934fd25348862140265cb8f7351552fc1a259b0614f250c1",
+      "actual": "c891fd91f70485752c9ac31687f2a57471c37b53ee54be51e9b4f43dc2680e06"
+    },
+    {
+      "path": "khmer.mjs",
+      "status": "mismatch",
+      "httpStatus": 200,
+      "expected": "1899a017032c3d40e95776966f6ff2ea94099433e3135182ac4593ff934af682",
+      "actual": "c891fd91f70485752c9ac31687f2a57471c37b53ee54be51e9b4f43dc2680e06"
+    },
+    {
+      "path": "session.mjs",
+      "status": "match",
+      "httpStatus": 200,
+      "expected": "827c8be3b0c8dc19e94034fdac91b72764058538ef87863502494e3d9a69c8cf",
+      "actual": "827c8be3b0c8dc19e94034fdac91b72764058538ef87863502494e3d9a69c8cf"
+    },
+    {
+      "path": "styles.css",
+      "status": "mismatch",
+      "httpStatus": 200,
+      "expected": "7a0465038eca0e7abcd261979567eb7dfc13f6005bf2c5c59ce9ebddcf50d090",
+      "actual": "0d139e621254578a442af8640f962c968b6fe75f5b23bed855e7c9507e0a41b3"
+    },
+    {
+      "path": "ui-state.mjs",
+      "status": "mismatch",
+      "httpStatus": 200,
+      "expected": "c28200a05b118c61bcb31305867f9afb412b56aa06b8ec5551363425a9d61d45",
+      "actual": "34aa0c7bee77d8b8a22e79537ef1ffbdd39ff27de1c9a131ef0872206fc665c4"
+    },
+    {
+      "path": "workspace.mjs",
+      "status": "mismatch",
+      "httpStatus": 200,
+      "expected": "ec90370084908be9af9865a41840d6fc735a616ede037bd2a800aea8552f5171",
+      "actual": "c891fd91f70485752c9ac31687f2a57471c37b53ee54be51e9b4f43dc2680e06"
+    }
+  ]
+}

@@ -25,6 +25,8 @@ jobs:
         run: npm run check:js
       - name: Test evidence solver Proof Gate persistence UI and CI contracts
         run: npm run test:node
+      - name: Evaluate controlled retail scenarios
+        run: npm run evaluate:demo -- --summary
 
   python:
     name: python-reference

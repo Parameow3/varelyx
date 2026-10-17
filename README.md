@@ -4,6 +4,19 @@
 
 Varelyx is an evidence-driven retail continuity prototype for the Google Cloud AI Builder Cup 2026, Retail & Commerce theme.
 
+[Open the Firebase prototype](https://varelyx-ai-builder-cup.web.app) · [Judge walkthrough](docs/JUDGE_QUICKSTART.md) · [Actual architecture](docs/ARCHITECTURE.md) · [Submission checklist](docs/SUBMISSION_READINESS_2026-10-17.md)
+
+## Try the decision loop
+
+Use the supplied synthetic supplier message, analyze it with live Gemini, then review the evidence and confirm **120 cases** of Thursday capacity. Compare plans, prove the balanced candidate (**PASS**), test the unsafe proposal (**BLOCK**, approval disabled), and prove balanced again (**PASS**). Explicitly approve the sandbox records, reload, and inspect the saved decision and audit.
+
+The controlled balanced plan uses **90 transfer + 120 Supplier B + 60 emergency cases**, **BDT 186,000**, and **30 expected stockout cases** across four fixed demand scenarios, compared with a 290-case unmitigated baseline. These are simulated quantities, not observed retail outcomes. No real order is sent.
+
+The current UI review candidate is PR #7; the public host can lag the reviewed source. Run `npm run verify:release` from the candidate checkout before asserting that it has been released. A static match is separate from live AI/save/reload verification.
+
+The interface and demo samples support English, Bangla and Khmer. USD/BDT/KHR are display preferences; canonical proof and saved money remain BDT. Sessions are anonymous and browser-private, so a shared link does not share a decision. Proof checks run in the client; the SHA-256 receipt is not a server-authoritative procurement approval.
+
+
 ## Competition deployment path
 
 The final no-card competition path is:
@@ -47,7 +60,7 @@ Project ID:
 
     varelyx-ai-builder-cup
 
-Expected public URL after deployment:
+Official public prototype URL:
 
     https://varelyx-ai-builder-cup.web.app
 
@@ -103,7 +116,7 @@ npm run check:js
 npm run test:node
 PYTHONPATH=. pytest -q
 npx playwright install --with-deps chromium
-python -m http.server 4173 -d public
+PORT=4173 STATIC_ONLY=1 node scripts/local-server.mjs
 ```
 
 In a second terminal:
@@ -114,3 +127,15 @@ npx --yes firebase-tools@latest projects:list
 ```
 
 Do not store Firebase CLI login tokens, service-account JSON, or personal Google credentials in the repository. GitHub Actions preview deployment is designed to use short-lived Google Workload Identity Federation credentials.
+
+
+## Controlled evaluation and release verification
+
+```bash
+npm run evaluate:demo -- --summary
+npm run verify:release
+```
+
+The evaluation checks 40 synthetic capacity/route scenarios, 160 generated plans, eight unsafe proposals and three HOLD cases. It supplies extraction fixtures directly and is not a Gemini accuracy benchmark or a customer-impact study. [Evidence and scope](docs/DATA_AND_EVALUATION.md).
+
+The release verifier compares the root document and every deployable file with this checkout. It is read-only and cannot establish App Check, AI, database or portal readiness by itself. [Release instructions and remaining submission items](docs/SUBMISSION_READINESS_2026-10-17.md).

@@ -1,6 +1,6 @@
 # AI Builder Cup 2026 — Competition Rules Lock
 
-Last verified: 2026-09-27 (Asia/Dhaka)
+Last verified: 2026-10-17 (Asia/Phnom_Penh), official public pages and authenticated dashboard.
 
 This is the repository-level competition guardrail for Varelyx.
 
@@ -13,6 +13,8 @@ This is the repository-level competition guardrail for Varelyx.
 Official public sources:
 - https://aibuildercup.com/
 - https://aibuildercup.com/themes.html
+- https://aibuildercup.com/Faqs.html
+- https://hack2skill.com/event/aibuildercup2026/dashboard/submissions
 
 ## Eligibility lock
 
@@ -20,8 +22,9 @@ Official public sources:
 - Age 21+.
 - Team size 2–4.
 - Working professionals only; students are not eligible.
-- Team formation deadline: 2026-10-11.
-- Prototype submission deadline: 2026-10-18.
+- Team formation: the current portal banner says extended to 2026-10-17, 11:59 PM IST; older public FAQ still says October 14. Portal announcements take precedence.
+- Prototype submission deadline: 2026-10-18, 11:59 PM IST, per the organizer reminder forwarded October 17. This is October 19, 01:29 in Phnom Penh.
+- Organizer recommended completion target: October 18, 18:00 IST / 19:30 Phnom Penh. Recheck the portal before submission.
 
 These are participant/account requirements and cannot be proven by repository code.
 
@@ -68,7 +71,8 @@ Rules:
 
 ## Varelyx product integrity
 
-- Gemini interprets messy language/evidence and generates focused evidence questions.
+- Gemini interprets messy language/evidence with quoted numeric fields.
+- Deterministic sensitivity logic ranks missing facts and selects a focused evidence question.
 - Deterministic math computes operational quantities and feasibility.
 - Proof Gate verifies hard constraints.
 - Human approval remains required before dispatch.
@@ -82,8 +86,9 @@ Rules:
 Before final submission:
 - Live Firebase-hosted working prototype.
 - Live Gemini integration verified in the deployed app.
-- PDF proposal/deck.
+- PDF proposal/deck using the prescribed portal template.
 - Public <=3-minute demo video (YouTube, Vimeo, or public Google Drive).
+- Public GitHub repository and brief description.
 - Exact theme/problem selected in portal.
 - All submission-facing code/docs/presentation in English.
 - Eligible 2–4 person team registered before the team deadline.

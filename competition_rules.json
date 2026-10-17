@@ -1,11 +1,13 @@
 {
   "competition": "Google Cloud AI Builder Cup 2026",
-  "verified_at": "2026-09-27",
+  "verified_at": "2026-10-17",
   "authority": {
     "official_overrides_repo": true,
     "official_urls": [
       "https://aibuildercup.com/",
-      "https://aibuildercup.com/themes.html"
+      "https://aibuildercup.com/themes.html",
+      "https://aibuildercup.com/Faqs.html",
+      "https://hack2skill.com/event/aibuildercup2026/dashboard/submissions"
     ],
     "portal_is_authoritative_for_final_form_fields": true
   },
@@ -16,17 +18,20 @@
     "team_max": 4,
     "working_professionals_only": true,
     "students_eligible": false,
-    "team_formation_deadline": "2026-10-11"
+    "team_formation_deadline": "2026-10-17"
   },
   "timeline": {
     "registration_start": "2026-09-01",
-    "team_formation_deadline": "2026-10-11",
+    "team_formation_deadline": "2026-10-17",
     "build_submission_start": "2026-09-07",
     "prototype_submission_deadline": "2026-10-18",
     "evaluation_start": "2026-10-19",
     "evaluation_end": "2026-11-06",
     "finalists_announcement": "2026-11-07",
-    "grand_finale": "2026-12-04"
+    "grand_finale": "2026-12-04",
+    "prototype_submission_deadline_ist": "2026-10-18T23:59:00+05:30",
+    "recommended_submission_target_ist": "2026-10-18T18:00:00+05:30",
+    "exact_time_source": "Organizer reminder dated 2026-10-17, forwarded by the team leader; recheck the live portal before submission."
   },
   "varelyx": {
     "theme": "Retail & Commerce: Intelligent Customer and Business Experiences",
@@ -65,7 +70,10 @@
       "public Google Drive"
     ],
     "english_materials_required": true,
-    "problem_or_theme_must_be_specified": true
+    "problem_or_theme_must_be_specified": true,
+    "public_repository_required": true,
+    "brief_description_required": true,
+    "prescribed_deck_template_required": true
   },
   "judging": {
     "technical_and_genai_percent": 40,
@@ -84,6 +92,10 @@
     {
       "issue": "Themes page lists Retail & Commerce while a lower Category Specification block contains older social-impact wording.",
       "rule": "Use live portal options for final form fields; do not invent a category; seek organizer clarification if materially conflicting."
+    },
+    {
+      "issue": "Public FAQ still lists October 14 team formation; the authenticated portal banner observed October 17 says extended to October 17 at 11:59 PM IST.",
+      "rule": "The current portal announcement overrides older public and repository dates. Recheck before making eligibility claims."
     }
   ]
 }

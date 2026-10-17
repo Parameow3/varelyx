@@ -1,48 +1,35 @@
-# Final Submission Gate - AI Builder Cup 2026
+# Final submission gate · October 17, 2026
 
-This file is the stop/go checklist. Do not mark the competition entry complete until every required gate is green.
+Use [current readiness and ownership](SUBMISSION_READINESS_2026-10-17.md), not earlier roadmap assumptions. The final cutoff in the organizer reminder is October 18, 23:59 IST / October 19, 01:29 Phnom Penh. Aim for its recommended October 18, 18:00 IST / 19:30 Phnom Penh target. Recheck the captain's live dashboard.
 
-## Competition compliance
+## Required package and account checks
 
-- [ ] Team has 2-4 eligible members.
-- [ ] Team members satisfy official eligibility requirements.
-- [ ] Theme/category selected in the portal matches the final entry.
-- [ ] Prototype uses Gemini or another eligible Google AI technology meaningfully.
-- [ ] Working prototype is deployed on Firebase/Google Cloud.
-- [ ] Proposal/deck PDF is uploaded in the required portal field.
-- [ ] Demo video is public/unlisted as allowed and is no longer than 3 minutes.
-- [ ] All required portal fields are complete.
-- [ ] Final submission is accepted before the official deadline.
+- [ ] Captain can access the ongoing submission round and prescribed deck template; audited member account currently shows neither.
+- [ ] Team eligibility, membership and latest formation-extension announcement confirmed in the portal.
+- [ ] Exact current Retail & Commerce theme/problem option selected.
+- [ ] Reviewed candidate merged/released on Firebase, with all public assets matching the candidate checkout.
+- [ ] Final public video URL works signed out and is under three minutes; Saidur owns it.
+- [ ] Prescribed-template deck PDF uploaded; Saidur owns it.
+- [x] Source repository is public; checked via signed-out access on October 17.
+- [x] Accurate English description, current architecture, judge walkthrough and bounded evaluation prepared.
+- [ ] Captain has pasted the final description and source/prototype/video links into the actual form and checked every required field.
 
-## Product proof
+## Final public product proof — repeat after release
 
-- [ ] Live Gemini call verified.
-- [ ] Balanced plan PASS verified.
-- [ ] Unsafe proposal BLOCK verified.
-- [ ] Human approval verified.
-- [ ] Realtime Database persistence verified.
-- [ ] Refresh persistence verified.
-- [ ] App Check remains registered.
-- [ ] Simulation labels are visible.
-- [ ] No unsupported customer/pilot/impact claims.
+- [ ] Normal-browser App Check passes without a private development token.
+- [ ] Live Gemini extracts quoted facts; capacity remains unknown until human review.
+- [ ] Operator confirms capacity 120 explicitly.
+- [ ] Balanced PASS; unsafe BLOCK and approval disabled; balanced PASS again.
+- [ ] Explicit human approval creates five sandbox records.
+- [ ] Firebase write/read-back and exact reload/root-resume verified.
+- [ ] Mobile navigation, help, dialogs and English/Bangla/Khmer samples checked on the deployed host.
+- [ ] Simulation and sandbox boundaries remain visible; no unsupported customer, pilot, benchmark or impact claim.
+- [ ] All final source, prototype, deck and video links work for a signed-out judge.
 
-## Judge-facing quality
+## Acceptance
 
-- [ ] Opening explains the problem in under 20 seconds.
-- [ ] Demo shows live product behavior, not slides only.
-- [ ] GenAI role is explicit and technically meaningful.
-- [ ] Deterministic/guardrail role is explicit.
-- [ ] Proof Gate differentiation is demonstrated.
-- [ ] Demo closes with impact and scale path.
-- [ ] Proposal deck and portal copy use the same claims.
+- [ ] Captain reviews declarations/terms and completes the submission.
+- [ ] Portal shows accepted/submitted status and a timestamp/receipt before cutoff.
+- [ ] Receipt is retained; deployed prototype and public links stay available through evaluation.
 
-## Owner-only actions remaining
-
-These require the entrant's account or real people and cannot be truthfully automated:
-- Confirm/add eligible team members.
-- Record and publish the final demo video.
-- Paste/upload final materials into the competition portal.
-- Accept declarations/terms.
-- Click the final Submit button.
-
-Never claim 100% competition completion until the portal confirms acceptance.
+Do not mark this gate complete from local tests, an emailed video attachment, a successful static page request, or a saved draft. The portal acceptance is the final evidence.

@@ -1,0 +1,19 @@
+{
+  "scope": "Fresh local review candidate against real Gemini and Firebase, using a synthetic English supplier sample. Not a verification of the current production UI.",
+  "liveGeminiVerified": true,
+  "reviewedCapacity": 120,
+  "phase": "APPROVED_SANDBOX",
+  "proofHistory": [
+    "PASS",
+    "BLOCK",
+    "PASS"
+  ],
+  "actionCount": 5,
+  "receipt": "ecbbe4ed77d78666b3522940cab7e3810fedd1dc1a7a182962dfcbd671fff391",
+  "serverReadBackVerified": true,
+  "revision": 7,
+  "exactReloadStateMatch": true,
+  "restoredFromServer": true,
+  "rootResume": "Verified separately by the live-judge-flow test",
+  "testResult": "1 passed (15.0s)"
+}

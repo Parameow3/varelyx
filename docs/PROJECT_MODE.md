@@ -2,10 +2,10 @@
 
 Mode: COMPETITION
 Overlay: Google Cloud AI Builder Cup 2026
-Milestone: Compact multilingual workspace and onboarding/resume candidate prepared for PR #7 review. Fresh syntax, 128 Node, 13 Python and 72 responsive cases passed; a separate private-token-free CI static run also passed 72 cases. Latest application live AI/save/reload/root-resume evidence is recorded. Owner review before merge/release.
+Milestone: Submission-first handoff prepared: current architecture/copy/judge guide, 40-scenario evaluation and strict public release matching. 134 Node, 13 Python, 72 browser checks and a fresh real-service full flow passed. Owner release, captain portal access, final video/deck and acceptance remain pending.
 Core flow: disruption -> missing evidence -> constrained plan -> Proof Gate -> approval -> persisted action.
 Proof needed: live Gemini, PASS/BLOCK, persisted action, refresh survival.
-Next: owner review of PR #7, then an approved release and fresh production-host verification.
+Next: owner reviews PR #7 and releases the exact candidate on Firebase; verify public AI/save/reload; Saidur publishes final video/deck and confirms the submission round/template and accepted portal entry.
 State: DEPLOYMENT_STATUS.md and docs/SUBMISSION_READY.md
 Standard: Saidur-droid/global-hackathon-opportunity-tracking/standards/AI_PRODUCT_OPERATING_STANDARD.md
 
@@ -22,3 +22,7 @@ Latest interface consistency evidence: docs/LOCALIZATION_QA_2026-10-17.md.
 Latest onboarding/resume evidence: docs/JOURNEY_UX_QA_2026-10-17.md.
 
 Final review candidate and screenshots: docs/PR7_UI_REVIEW_2026-10-17.md.
+
+Three-minute narrated local review draft and fresh recording evidence: `docs/DEMO_REVIEW_2026-10-17.md`. Remote run 39009548089 exposed the scroll-dismissal race; the repair passed local checks and all three GitHub checks in run 39010685250. See `MOBILE_HELP_QA_2026-10-17.md`.
+
+Submission readiness and ownership: `docs/SUBMISSION_READINESS_2026-10-17.md`.

@@ -7,7 +7,9 @@
     "check:js": "for file in public/*.js public/*.mjs; do node --check \"$file\"; done",
     "test:node": "node --test tests/*.test.mjs",
     "test:e2e": "playwright test",
-    "dev": "node scripts/local-server.mjs"
+    "dev": "node scripts/local-server.mjs",
+    "evaluate:demo": "node scripts/evaluate-demo.mjs",
+    "verify:release": "node scripts/verify-public-release.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0"

@@ -1,5 +1,25 @@
 # Varelyx Deployment Status
 
+## October 17, 2026: submission-first handoff
+
+Saidur owns final video/deck and requested submission focus. Current readiness is in `docs/SUBMISSION_READINESS_2026-10-17.md`: public source confirmed, judge guide/accurate architecture/description prepared, stale architecture/benchmark claims corrected, official rules rechecked, controlled evaluation added to CI, and the release controller now requires exact reviewed-asset matching. All 134 Node, 13 Python and 72 browser cases passed (8 existing gated skips), plus a fresh 15.0-second real Gemini/Firebase full flow.
+
+**Release is pending:** current public Hosting differs in 14/18 assets; normal-browser App Check and live AI passed, while headless attestation was denied. This Firebase identity receives Hosting HTTP 403. PR #7 still needs owner review/release and final production QA. The member portal exposes no ongoing submission round or deck template; captain-side confirmation is needed. Final public video/deck and portal acceptance remain pending. Earlier dated notes below are historical snapshots.
+
+No new product features, merge/deploy, security relaxation, organizer/team message or final submission was performed. Central portfolio/Linear synchronization remains owner-side pending (standard HTTP 404).
+
+
+## October 17, 2026: mobile help race repaired
+
+Reproduced a queued-scroll dismissal after focus/tap. Help now repositions on scroll/resize; mobile coverage uses touch emulation and checks scroll/resize persistence and containment. Syntax, 128 Node, 13 Python, 72 browser cases (8 existing gated skips), and a fresh 14.4-second real-service full flow passed. See `docs/MOBILE_HELP_QA_2026-10-17.md`. PR #7 commit `13cf08be14daf9f1451a62508424a575b99f7224` passed all three remote checks (web-contracts, python-reference, browser-smoke) in [run 39010685250](https://github.com/Saidur-droid/varelyx/actions/runs/39010685250); previous failure notes below describe the prior candidate. No merge/release. Central portfolio/Linear tracking remains owner-side pending (standard HTTP 404).
+
+## October 17, 2026: three-minute local review demo
+
+Prepared timed English narration/captions and recorded a fresh real-service full flow: live Gemini, capacity review, PASS/BLOCK/PASS, explicit sandbox approval, five saved actions, revision-7 read-back, exact reload restore and root-link resume. Video export/review evidence is tracked in `docs/DEMO_REVIEW_2026-10-17.md`. Latest UI is still local/pending owner release; shared decisions remain deferred.
+
+PR #7 is published. Remote GitHub run 39009548089 passed web contracts/Python but failed one mobile context-help test; it remains pending investigation despite earlier local passes. Do not treat CI as all green or release the candidate without resolving/reviewing this result. Central portfolio/Linear tracking remains owner-side pending (standard repository HTTP 404).
+
+
 ## October 17, 2026: final compact UI review candidate
 
 The light compact workspace, English/Bangla/Khmer copy, USD/BDT/KHR display and start/resume guidance are prepared for PR #7 review. Fresh preflight passed syntax, 128 Node tests, 13 Python reference tests and 72 responsive browser cases (8 gated cases skipped). The separate CI-equivalent static Node-server run also passed all 72 applicable browser cases; it avoids reproduced parallel module-download resets from the Python test server and never creates/serves an App Check token. Review screenshots and scope are in `docs/PR7_UI_REVIEW_2026-10-17.md`. Production remains unchanged; merge/release and fresh production-host QA require owner review. Shared decisions remain postponed. Central portfolio/Linear tracking is owner-side pending (standard repository HTTP 404).

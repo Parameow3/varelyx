@@ -1,252 +1,30 @@
-# Varelyx Competition and Demo Plan
+# Competition positioning · current implementation
 
-## Competition
+As of October 17, Saidur owns the final video and prescribed-template deck. Engineering focus is submission completeness, a stable released prototype, source access, accurate documentation and verified links. [Submission readiness](SUBMISSION_READINESS_2026-10-17.md) is the current handoff.
 
-Target: Google Cloud AI Builder Cup 2026.
+## Product story
 
-Primary theme: **Retail & Commerce**.
+Varelyx turns incomplete supplier evidence into a reviewed retail recovery decision. Gemini structures supported facts; deterministic sensitivity identifies the critical missing input; constrained planning compares responses; a separate Proof Gate can block a plan; a human approves sandbox records that persist and restore.
 
-Current judging emphasis captured during planning:
-- Technical Merit & GenAI Implementation — 40%
-- Problem Alignment & Impact — 25%
-- Innovation & Creativity — 25%
-- UX & Solution Design — 10%
+This is a retail operations continuity prototype, aligned to **Retail & Commerce: Intelligent Customer and Business Experiences**.
 
-The build must therefore be both technically real and visually legible.
+## Judging evidence
 
-## Competition positioning
+The official [criteria](https://aibuildercup.com/themes.html) allocate 40% technical/GenAI, 25% problem/impact, 25% innovation and 10% UX. Show the actual implementation rather than adding an architectural component only for the pitch.
 
-Do not pitch Varelyx as:
-- another retail dashboard;
-- another demand forecast;
-- another AI replenishment assistant;
-- an “AI operating system” with vague scope;
-- a seven-agent architecture for show.
+| Criterion | Demonstrable evidence |
+|---|---|
+| Technical / GenAI | Real Gemini extraction with source quotes; typed validation; deterministic planner; separate constraint checks; real Firebase write/read-back/reload. |
+| Problem / impact | Supplier delay and unknown replacement capacity affect an operator's decision. Show supply/cash/stockout trade-offs under disclosed synthetic inputs. |
+| Innovation | Resolve a decision-critical missing fact before allowing a constrained plan through proof and human review. |
+| UX | Clear starting/resume guidance, compact comparisons, explicit review dialogs, accessible contextual help and responsive translated samples. |
 
-Pitch it as:
+## Demonstration beats
 
-> **Varelyx is the evidence-driven response layer for retail disruptions. It identifies what is known and unknown, asks only for the missing evidence that can change the decision, explores plausible futures, computes a feasible response, proves it against business rules, and only then turns it into action.**
+Supplier evidence → live AI → unknown capacity → human confirms 120 → compare plans → balanced PASS → unsafe BLOCK → balanced PASS → explicit approval → five saved records → reload. Keep labels and quantities readable. Use [judge instructions](JUDGE_QUICKSTART.md), [actual architecture](ARCHITECTURE.md) and [controlled evaluation](DATA_AND_EVALUATION.md) to support the final video/deck.
 
-## Technical story
+The 2:58 local review video already shared with Saidur is a draft, not proof of a public final video URL or a production release. He will prepare the final video/deck. Record the approved public build after normal-browser AI/save/reload checks.
 
-The technical story must be clear in under 30 seconds:
+## Claims boundary
 
-- Gemini understands messy operational evidence and generates the highest-value question.
-- Google ADK orchestrates bounded tools.
-- BigQuery/BigQuery ML maintain state and forecast uncertainty.
-- OR-Tools computes feasible decisions.
-- Proof Gate independently verifies hard constraints.
-- Cloud Run hosts the working system.
-- Firestore stores approvals and action objects.
-
-Key sentence:
-
-> **We do not ask an LLM to make inventory decisions. We use AI to understand a changing world, mathematical optimization to decide what is feasible, and a proof gate to decide what is allowed to act.**
-
-## Innovation story
-
-Hero innovation:
-
-**AI that knows what it does not know and knows which question is worth asking.**
-
-The system ranks missing facts by their potential decision value rather than asking operators to fill every data gap.
-
-Supporting innovation:
-- explicit Known / Estimated / Unknown state;
-- uncertainty-aware scenario planning;
-- robust response selection;
-- deterministic proof before execution;
-- Shadow Mode and Value Ledger for trust/adoption.
-
-## Impact story
-
-Business pain:
-- stockouts and lost margin;
-- emergency procurement;
-- wasted working capital;
-- delayed supplier coordination;
-- manual decision recovery;
-- operational uncertainty.
-
-Bangladesh is the starting context because fragmented retail/distribution makes these issues visible, but the underlying problem is global.
-
-## 3-minute demo storyboard
-
-### 0:00–0:12 — Normal world
-Show Dhaka retail network.
-
-- 250 stores.
-- 1,200 SKUs.
-- 6 suppliers.
-
-Everything green.
-
-### 0:12–0:28 — Chaos
-Three disruptions appear:
-- Eid in 6 days;
-- 2 routes affected;
-- Bangla supplier voice note says delivery is delayed.
-
-Gemini extracts:
-- Delivery delay: 48h.
-- Confirmed capacity: Unknown.
-- Confidence: High.
-
-### 0:28–0:50 — Signature moment
-Screen:
-
-**DECISION NOT READY**
-
-Then:
-
-> 1 critical unknown can materially change the recovery plan.
-
-Show:
-- Supplier B Thursday capacity.
-- Estimated decision value of resolving it: calculated amount.
-
-Button: **ASK**.
-
-### 0:50–1:05 — Evidence arrives
-Supplier sandbox replies:
-
-> Maximum 120 cases.
-
-UI shows uncertainty shrinking and scenario space updating.
-
-### 1:05–1:30 — Scenario storm
-Show multiple plausible futures.
-
-Compare:
-- current plan;
-- cheapest alternative;
-- robust plan.
-
-Example visualization:
-- current plan fails in many scenarios;
-- cheapest is fragile;
-- robust plan survives most tested scenarios.
-
-Numbers must be generated by the actual engine, not hardcoded.
-
-### 1:30–1:55 — Recovery plan
-Map animates transfers and replenishment.
-
-Strategies:
-- Cheapest.
-- Balanced.
-- Maximum Availability.
-
-Varelyx recommends one based on objective + robustness.
-
-### 1:55–2:15 — Prove it
-Click **PROVE THIS PLAN**.
-
-Constraint matrix appears:
-- working capital;
-- supplier capacity;
-- donor safety stock;
-- MOQ/pack size;
-- route availability;
-- critical SKU floor;
-- manager policy;
-- unresolved high-value evidence.
-
-Deliberately show one alternative blocked because it violates policy.
-
-Key visual message:
-
-**AI can be told NO by mathematics.**
-
-### 2:15–2:32 — Shadow Mode
-Split view:
-- Existing response.
-- Varelyx response.
-
-Compare controlled-simulation metrics:
-- predicted stockout exposure;
-- cash required;
-- emergency purchasing;
-- scenario robustness.
-
-Label clearly: **Controlled scenario comparison**.
-
-### 2:32–2:47 — Execute
-Click **APPROVE & DISPATCH**.
-
-Actual backend objects appear:
-- 12 transfer orders;
-- 3 PO drafts;
-- 1 supplier escalation;
-- 2 manager tasks.
-
-Counts in final demo should come from the live scenario, not hardcoded narration.
-
-### 2:47–3:00 — Ending
-Black screen:
-
-> Retail planning assumes tomorrow behaves like the plan.
-
-Then:
-
-> Reality doesn't.
-
-Brand:
-
-# Varelyx
-
-> **Know what matters. Ask what’s missing. Prove what works. Then act.**
-
-End:
-
-> **Built in Bangladesh. Designed for volatile commerce everywhere.**
-
-## Submission quality bar
-
-The final package should include:
-- live deployed working prototype;
-- public/demo-safe GitHub repo if required by competition rules;
-- <=3-minute demo video;
-- architecture diagram;
-- deck/PDF;
-- problem and market evidence;
-- benchmark/evaluation evidence;
-- scalability story;
-- explicit Google Cloud service usage.
-
-## Demo rules
-
-- No fake buttons.
-- No fake metrics.
-- No generic long intro.
-- No 40-second architecture lecture.
-- No unbounded chatbot conversation.
-- No unsupported “we reduce stockouts by X%” claims.
-- Every major visual should correspond to a working backend capability.
-- The highest-value novelty should appear in the first minute.
-
-## Judge Q&A preparation
-
-### “How is this different from existing retail planning software?”
-Varelyx is not trying to replace the whole planning stack. It is a disruption-response layer focused on incomplete evidence, decision-critical uncertainty, robust response, and proof-gated execution.
-
-### “Why do you need Gemini?”
-Because real disruption evidence arrives in language, documents, voice notes, and ambiguous operational statements. Gemini structures evidence, interprets policies, identifies missing facts, generates the next best question, and orchestrates tools. The numerical decision remains deterministic.
-
-### “Why not just use optimization?”
-Optimization needs a structured state. Varelyx's AI layer turns messy reality into that state and actively reduces the uncertainty that matters before optimization.
-
-### “How do you trust the AI?”
-We do not trust an LLM blindly. The Proof Gate independently verifies encoded business constraints, and high-risk actions require human approval.
-
-### “Is the demo data real?”
-Module benchmarks use real open datasets. The end-to-end Bangladesh Continuity Twin is a controlled simulation built from open retail benchmarks and must be labelled as such.
-
-## Final objective
-
-Judges should leave with four impressions:
-
-1. **Technically serious** — not a wrapper.
-2. **Operationally useful** — not a research toy.
-3. **Differentiated** — active evidence acquisition + proof-gated action.
-4. **Company-shaped** — plausible post-hackathon business.
+No customer, pilot, revenue, measured retailer impact, imported demand benchmark, ADK orchestration, BigQuery forecasting, Firestore approvals, store/SKU network optimization or external dispatch is demonstrated by the current web build. The optional Python reference must not be presented as the runtime behind the Firebase app. All scenario outcomes are simulations. The proof receipt is client-side, not an authoritative procurement approval.

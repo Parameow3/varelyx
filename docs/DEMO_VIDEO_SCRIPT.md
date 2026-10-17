@@ -1,83 +1,59 @@
-# Varelyx - 3 Minute Demo Video Script
+# Varelyx · three-minute review demo
 
-Working recording target: **under 3 minutes**. Confirm the final duration and other requirements in the organizer dashboard before recording; this script is not evidence of the official limit.
+This is the earlier 2:58 review draft. Saidur now owns the final video/deck; use the approved public build and the current submission checklist for final recording.
 
-## 0:00-0:18 - Problem
+Duration: 178.0 seconds. English system narration. Recorded local UI with real Gemini and Firebase, using a synthetic scenario. Edited for pace; not a production release or measured customer outcome.
 
-**Voiceover:**  
-"Retail disruption decisions arrive as messy evidence: supplier messages, uncertain capacity, inventory constraints, and urgent deadlines. A fluent AI answer is not enough if the resulting plan violates a hard operational rule."
+## 00:00:00–00:00:13 · THE RETAIL PROBLEM
 
-Show the Varelyx live app and the disruption scenario.
+A supplier is delayed. Stock is running low, and replacement capacity is unknown. Varelyx helps a retail operator turn that uncertainty into a decision they can review, verify, and approve.
 
-## 0:18-0:42 - Varelyx thesis
+## 00:00:13–00:00:29 · LIVE GEMINI ANALYSIS
 
-**Voiceover:**  
-"Varelyx turns that uncertainty into a governed decision loop: Know what is supported by evidence, Ask for the most valuable missing fact, Prove a plan against constraints, then Act only with human approval."
+We begin with a realistic, synthetic supplier message. It describes a forty-eight-hour delay affecting two distribution routes. Analyze disruption sends this evidence to live Gemini through Firebase AI Logic.
 
-Show the **Evidence → Plan → Verify → Approve** workflow tabs. Explain the Know / Ask / Prove / Act method in narration.
+## 00:00:29–00:00:46 · SUPPORTED FACTS & MISSING CAPACITY
 
-## 0:42-1:15 - Live Gemini
+Gemini structures the supported facts and preserves source quotes. Notice what stays unknown: supplier capacity. Varelyx asks the operator for the missing fact instead of letting the model invent a purchasing quantity.
 
-In Evidence, open **Supplier message** if collapsed and click **Analyze disruption**.
+## 00:00:46–00:01:02 · HUMAN EVIDENCE REVIEW
 
-**Voiceover:**  
-"Gemini structures the disruption evidence. Deterministic sensitivity analysis selects the missing fact most likely to change this controlled decision. The model helps understand evidence; it does not get authority to invent executable order quantities."
+For this controlled scenario, the operator confirms one hundred and twenty cases. The review dialog brings the extracted facts and original message together, so confirmation is an explicit human action.
 
-Show the readable live analysis, extracted facts, unknown capacity and the critical question. Full extraction/source quotes remain available in the disclosure.
+## 00:01:02–00:01:20 · COMPARE RECOVERY PLANS
 
-## 1:15-1:35 - Resolve uncertainty
+The plan comparison makes the trade-off visible. The balanced candidate combines ninety transfer cases, one hundred and twenty supplier cases, and sixty emergency cases. Its simulated stockout is thirty cases, with cash of one hundred and eighty-six thousand taka.
 
-Enter Supplier B Thursday capacity as **120 cases**. Open **Review & confirm**, inspect the facts and supplier source in the in-app dialog, then confirm the reviewed evidence.
+## 00:01:20–00:01:34 · PROOF GATE: PASS
 
-**Voiceover:**  
-"Once the operator confirms supplier capacity, Varelyx recomputes feasible strategies using deterministic constraints."
+Now the independent, deterministic Proof Gate checks the listed constraints. The balanced candidate passes all eight checks. The receipt binds this evidence, these quantities, and these check results.
 
-The app opens Plan. Show the compact comparison table and the balanced demo candidate.
+## 00:01:34–00:01:49 · NEGATIVE TEST: BLOCK
 
-## 1:35-2:05 - Proof Gate differentiation
+Next, we deliberately test an unsafe proposal. The Proof Gate returns BLOCK, and approval is disabled. A persuasive explanation cannot override a failed constraint. This is a controlled negative test.
 
-Run the balanced plan and show **PASS**. Then run the intentionally unsafe proposal and show **BLOCK**, with approval disabled. **Prove the balanced candidate again and show PASS before proceeding to approval.**
+## 00:01:49–00:01:59 · RE-CHECK: PASS
 
-**Voiceover:**  
-"This is the key difference. The Proof Gate independently checks the listed hard constraints; it does not verify every predicted outcome metric. A balanced plan passes; an unsafe proposal is blocked even if an AI could describe it persuasively."
+We restore the balanced candidate and check it again. PASS, BLOCK, PASS remains visible in the proof history. Human approval is available again.
 
-## 2:05-2:28 - Human approval + persistence
+## 00:01:59–00:02:15 · EXPLICIT HUMAN APPROVAL
 
-In Verify/Approve, open the approval dialog, show the quantities, cash and receipt, then approve the sandbox actions. The app opens Saved Actions. Refresh to show restoration, then visit Evidence to show restored capacity and Verify to show the saved PASS/BLOCK/PASS history.
+Before saving, the operator reviews the transfer, supplier draft, emergency draft, and cash requirement. Approval creates sandbox records only. No purchase order or transfer is sent to a supplier or external system.
 
-**Voiceover:**  
-"Execution stays human-controlled. Approved sandbox action records are saved in Firebase and survive reload. No real purchase or transfer is sent."
+## 00:02:15–00:02:29 · VERIFIED FIREBASE SAVE
 
-## 2:28-2:52 - Architecture + impact
+Five approved action records are now saved. Firebase read-back verifies persistence. The decision includes the reviewed capacity, proof history, and approval receipt, ready for inspection or export.
 
-Show a concise architecture view or the app footer/stack.
+## 00:02:29–00:02:44 · RELOAD & RESUME
 
-**Voiceover:**  
-"Varelyx combines Gemini through Firebase AI Logic, Firebase Hosting, Anonymous Authentication, App Check, and Realtime Database. It is designed to help retail teams make faster continuity decisions without confusing model confidence with operational proof."
+Reloading restores the same decision directly from Firebase. Opening the app again returns to saved actions with a clear next step. This continuity currently belongs to the same browser; team sharing is deferred.
 
-## 2:52-2:58 - Close
+## 00:02:44–00:02:58 · VARELYX · EVIDENCE BEFORE ACTION
 
-**Voiceover:**  
-"Varelyx: know what matters, ask what is missing, prove what works, then act."
+Varelyx: understand the evidence, ask what is missing, prove the constraints, and keep people in control. This is a local review build using real Gemini and Firebase services, with synthetic retail data.
 
-End on product name + live URL.
+## Review and release notes
 
-## Recording rules
+This local review draft uses real services and synthetic data. The latest UI is pending owner release. Confirm current organizer duration, language and hosting requirements before submission, then re-record the approved production build. No claim of official compliance or measured retail outcomes is made.
 
-- Record the live deployed product.
-- Keep the final export under 3 minutes.
-- Use English narration/captions for submission.
-- Do not claim real customers, pilots, revenue, or measured impact unless independently evidenced.
-- Keep controlled-simulation values labelled.
-- Make **LIVE GEMINI VERIFIED**, **PASS**, and **BLOCK** readable on screen.
-- Test the final public video link while signed out.
-
-
-## Local design and locale review (October 17)
-
-The compact UI is local only, with Khmer added alongside English/Bangla and independent USD/BDT/KHR display preferences. Use Connection details to inspect or adjust dated reference rates. Converted values are indicative; proof/export amounts remain BDT. Do not imply a Cambodian retailer deployment or broad natural-language validation from the translated interface. The supplied Khmer and Bangla synthetic samples now pass live extraction and the full saved flow; custom evidence still requires conservative quote/unit checks and human review. The fresh local real-service flow passed; see `docs/STITCH_LOCAL_IMPLEMENTATION_2026-10-17.md`.
-
-
-## Minimal workflow UI refinement
-
-The Evidence screen initially shows only the supplier message and Analyze action. Analysis reveals facts and the capacity review. Use section “?” controls for explanations (hover, keyboard focus or tap); main screens emphasize values and actions. Proof observations and authority limits remain available through Proof Gate help; approval still requires the explicit confirmation dialog. Persistence read-back details and the walkthrough are in Connection. The final compact UI passed a fresh real Khmer-sample AI/proof/approval/save/reload run; see the minimal-help evidence above.
+Demo evidence and pending items: `DEMO_REVIEW_2026-10-17.md`.

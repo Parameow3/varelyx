@@ -44,17 +44,17 @@ npx --yes firebase-tools@latest deploy \
 echo "=== WAIT FOR OFFICIAL HOST TO SERVE LATEST UI ==="
 ready=0
 for attempt in $(seq 1 24); do
-  body="$(curl -fsSL --max-time 20 "$PRODUCTION_URL/" || true)"
-  if printf '%s' "$body" | grep -q 'id="commandCenter"'; then
+  if node scripts/verify-public-release.mjs --url "$PRODUCTION_URL" > /tmp/varelyx-public-release.json; then
     ready=1
-    echo "Official Firebase host is serving the latest Decision Command Center."
+    echo "Official Firebase host exactly matches every reviewed public asset."
     break
   fi
   echo "Attempt $attempt/24: waiting for Firebase Hosting propagation..."
   sleep 5
 done
 if [ "$ready" -ne 1 ]; then
-  echo "Official Firebase host did not serve #commandCenter after deploy." >&2
+  echo "Official Firebase host did not match the reviewed public assets after deploy." >&2
+  cat /tmp/varelyx-public-release.json
   exit 1
 fi
 

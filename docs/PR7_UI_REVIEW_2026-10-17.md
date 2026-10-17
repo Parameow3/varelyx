@@ -10,6 +10,10 @@ Review candidate for `fix/submission-reliability`, October 17, 2026. The work is
 4. Inspect five sandbox actions, receipt and audit history. Reload and reopen the root link; completed work opens Saved. “New decision” is confirmed and retains approved receipts.
 5. Try English, Bangla and Khmer, plus USD/BDT/KHR display. Native source quotes remain verbatim and proof/save amounts remain BDT.
 
+## Submission-first hardening
+
+The candidate now also includes an accurate judge walkthrough/architecture and submission copy, refreshed official rules/deadlines, a reproducible 40-scenario constraint evaluation in CI, and strict release matching of the root document plus all public assets. The check detected that public Hosting still differs in 14/18 assets. Local checks passed: syntax, 134 Node, 13 Python, 72 browser cases (8 existing opt-in skips) and a fresh real-service flow. Owner release and captain-side portal/video/deck/acceptance remain pending. See `SUBMISSION_READINESS_2026-10-17.md`.
+
 ## Mobile help repair
 
 The first remote browser run exposed a real interaction race: a queued smooth-scroll event dismissed help immediately after tap/focus opened it. Help now repositions within the viewport on scroll/resize. Mobile coverage uses touch emulation and an actual tap, followed by scroll, resize and containment assertions. Escape, outside-click, keyboard and workflow help checks remain intact. Fresh local results: syntax, 128 Node, 13 Python, all 72 browser cases (8 existing gated skips), plus a real Gemini/Firebase approval/save/reload/root-resume run passed. See `MOBILE_HELP_QA_2026-10-17.md`; current remote status is in the PR checks.

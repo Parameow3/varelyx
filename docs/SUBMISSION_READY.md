@@ -1,4 +1,6 @@
-# AI Builder Cup 2026 - Submission-ready content
+# AI Builder Cup 2026 - Candidate submission content
+
+October 17 update: [current readiness/ownership](SUBMISSION_READINESS_2026-10-17.md), [paste-ready description](SUBMISSION_PORTAL_COPY.md), [judge walkthrough](JUDGE_QUICKSTART.md), and [actual architecture](ARCHITECTURE.md). The entry is not complete: latest Hosting release, final public video/deck and portal acceptance remain pending. Saidur owns the final video and prescribed-template deck.
 
 ## Theme
 Retail & Commerce: Intelligent Customer and Business Experiences
@@ -7,7 +9,7 @@ Retail & Commerce: Intelligent Customer and Business Experiences
 Varelyx - evidence-driven retail continuity intelligence.
 
 ## One-line pitch
-When a retail operating plan breaks, Varelyx identifies the evidence that matters, asks for the missing fact most likely to change the decision, computes feasible responses, proves them against hard rules, and only then turns a verified plan into execution-ready actions.
+When a retail operating plan breaks, Varelyx identifies the evidence that matters, asks for the missing fact most likely to change the decision, computes feasible responses, proves them against hard rules, and only then turns a verified plan into sandbox action records.
 
 ## Why GenAI is necessary
 Operational disruptions arrive as messy language and ambiguous supplier messages. Gemini converts that evidence into structured operational state. Deterministic sensitivity analysis ranks missing facts and selects the focused evidence question. Gemini does **not** invent order quantities. Deterministic constrained logic computes quantities and an independent Proof Gate verifies hard rules before action.

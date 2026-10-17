@@ -1,0 +1,1741 @@
+{
+  "generatedAt": "2026-10-17T08:42:58.060Z",
+  "coreSha256": "af1888a2409f2edd89fb0bf2a116d8352fc48f121abf7b6fbfb1b6e5a01ff795",
+  "scope": "Synthetic deterministic constraint evaluation. Extraction fixtures are supplied directly; no Gemini call is made. Not measured retailer impact, general AI accuracy or server-authoritative approval.",
+  "policyVersion": "simulation-v2",
+  "scenarioCount": 40,
+  "feasiblePlansChecked": 160,
+  "unsafeProposalsBlocked": 8,
+  "incompleteEvidenceHeld": 3,
+  "allExpectedResultsPassed": true,
+  "scenarios": [
+    {
+      "capacity": 0,
+      "routes": 0,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 90,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 10800,
+          "simulatedStockout": 200,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 90,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 138800,
+          "simulatedStockout": 100,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 90,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 138800,
+          "simulatedStockout": 100,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 0,
+      "routes": 2,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 90,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 10800,
+          "simulatedStockout": 200,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 90,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 138800,
+          "simulatedStockout": 100,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 90,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 138800,
+          "simulatedStockout": 100,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 0,
+      "routes": 3,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 60,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 7200,
+          "simulatedStockout": 230,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 60,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 135200,
+          "simulatedStockout": 130,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 60,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 135200,
+          "simulatedStockout": 130,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 0,
+      "routes": 5,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 128000,
+          "simulatedStockout": 190,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 128000,
+          "simulatedStockout": 190,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 0,
+      "routes": 100,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 128000,
+          "simulatedStockout": 190,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 128000,
+          "simulatedStockout": 190,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 49,
+      "routes": 0,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 90,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 10800,
+          "simulatedStockout": 200,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 90,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 138800,
+          "simulatedStockout": 100,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 90,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 138800,
+          "simulatedStockout": 100,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 49,
+      "routes": 2,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 90,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 10800,
+          "simulatedStockout": 200,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 90,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 138800,
+          "simulatedStockout": 100,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 90,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 138800,
+          "simulatedStockout": 100,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 49,
+      "routes": 3,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 60,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 7200,
+          "simulatedStockout": 230,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 60,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 135200,
+          "simulatedStockout": 130,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 60,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 135200,
+          "simulatedStockout": 130,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 49,
+      "routes": 5,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 128000,
+          "simulatedStockout": 190,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 128000,
+          "simulatedStockout": 190,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 49,
+      "routes": 100,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 128000,
+          "simulatedStockout": 190,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 100,
+          "cashBDT": 128000,
+          "simulatedStockout": 190,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 50,
+      "routes": 0,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 90,
+          "supplier": 50,
+          "emergency": 0,
+          "cashBDT": 51800,
+          "simulatedStockout": 150,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 90,
+          "supplier": 50,
+          "emergency": 100,
+          "cashBDT": 179800,
+          "simulatedStockout": 52.5,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 90,
+          "supplier": 50,
+          "emergency": 100,
+          "cashBDT": 179800,
+          "simulatedStockout": 52.5,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 50,
+      "routes": 2,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 90,
+          "supplier": 50,
+          "emergency": 0,
+          "cashBDT": 51800,
+          "simulatedStockout": 150,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 90,
+          "supplier": 50,
+          "emergency": 100,
+          "cashBDT": 179800,
+          "simulatedStockout": 52.5,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 90,
+          "supplier": 50,
+          "emergency": 100,
+          "cashBDT": 179800,
+          "simulatedStockout": 52.5,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 50,
+      "routes": 3,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 60,
+          "supplier": 50,
+          "emergency": 0,
+          "cashBDT": 48200,
+          "simulatedStockout": 180,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 60,
+          "supplier": 50,
+          "emergency": 100,
+          "cashBDT": 176200,
+          "simulatedStockout": 80,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 60,
+          "supplier": 50,
+          "emergency": 100,
+          "cashBDT": 176200,
+          "simulatedStockout": 80,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 50,
+      "routes": 5,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 0,
+          "supplier": 50,
+          "emergency": 0,
+          "cashBDT": 41000,
+          "simulatedStockout": 240,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 0,
+          "supplier": 50,
+          "emergency": 100,
+          "cashBDT": 169000,
+          "simulatedStockout": 140,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 0,
+          "supplier": 50,
+          "emergency": 100,
+          "cashBDT": 169000,
+          "simulatedStockout": 140,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 50,
+      "routes": 100,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 0,
+          "supplier": 50,
+          "emergency": 0,
+          "cashBDT": 41000,
+          "simulatedStockout": 240,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 0,
+          "supplier": 50,
+          "emergency": 100,
+          "cashBDT": 169000,
+          "simulatedStockout": 140,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 0,
+          "supplier": 50,
+          "emergency": 100,
+          "cashBDT": 169000,
+          "simulatedStockout": 140,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 60,
+      "routes": 0,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 90,
+          "supplier": 60,
+          "emergency": 0,
+          "cashBDT": 60000,
+          "simulatedStockout": 140,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 90,
+          "supplier": 60,
+          "emergency": 100,
+          "cashBDT": 188000,
+          "simulatedStockout": 45,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 90,
+          "supplier": 60,
+          "emergency": 100,
+          "cashBDT": 188000,
+          "simulatedStockout": 45,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 60,
+      "routes": 2,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 90,
+          "supplier": 60,
+          "emergency": 0,
+          "cashBDT": 60000,
+          "simulatedStockout": 140,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 90,
+          "supplier": 60,
+          "emergency": 100,
+          "cashBDT": 188000,
+          "simulatedStockout": 45,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 90,
+          "supplier": 60,
+          "emergency": 100,
+          "cashBDT": 188000,
+          "simulatedStockout": 45,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 60,
+      "routes": 3,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 60,
+          "supplier": 60,
+          "emergency": 0,
+          "cashBDT": 56400,
+          "simulatedStockout": 170,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 60,
+          "supplier": 60,
+          "emergency": 100,
+          "cashBDT": 184400,
+          "simulatedStockout": 70,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 60,
+          "supplier": 60,
+          "emergency": 100,
+          "cashBDT": 184400,
+          "simulatedStockout": 70,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 60,
+      "routes": 5,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 0,
+          "supplier": 60,
+          "emergency": 0,
+          "cashBDT": 49200,
+          "simulatedStockout": 230,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 0,
+          "supplier": 60,
+          "emergency": 100,
+          "cashBDT": 177200,
+          "simulatedStockout": 130,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 0,
+          "supplier": 60,
+          "emergency": 100,
+          "cashBDT": 177200,
+          "simulatedStockout": 130,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 60,
+      "routes": 100,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 0,
+          "supplier": 60,
+          "emergency": 0,
+          "cashBDT": 49200,
+          "simulatedStockout": 230,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 0,
+          "supplier": 60,
+          "emergency": 100,
+          "cashBDT": 177200,
+          "simulatedStockout": 130,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 0,
+          "supplier": 60,
+          "emergency": 100,
+          "cashBDT": 177200,
+          "simulatedStockout": 130,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 119,
+      "routes": 0,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 90,
+          "supplier": 110,
+          "emergency": 0,
+          "cashBDT": 101000,
+          "simulatedStockout": 90,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 90,
+          "supplier": 110,
+          "emergency": 70,
+          "cashBDT": 190600,
+          "simulatedStockout": 30,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 90,
+          "supplier": 110,
+          "emergency": 100,
+          "cashBDT": 229000,
+          "simulatedStockout": 15,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 119,
+      "routes": 2,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 90,
+          "supplier": 110,
+          "emergency": 0,
+          "cashBDT": 101000,
+          "simulatedStockout": 90,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 90,
+          "supplier": 110,
+          "emergency": 70,
+          "cashBDT": 190600,
+          "simulatedStockout": 30,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 90,
+          "supplier": 110,
+          "emergency": 100,
+          "cashBDT": 229000,
+          "simulatedStockout": 15,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 119,
+      "routes": 3,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 60,
+          "supplier": 110,
+          "emergency": 0,
+          "cashBDT": 97400,
+          "simulatedStockout": 120,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 60,
+          "supplier": 110,
+          "emergency": 100,
+          "cashBDT": 225400,
+          "simulatedStockout": 30,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 60,
+          "supplier": 110,
+          "emergency": 100,
+          "cashBDT": 225400,
+          "simulatedStockout": 30,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 119,
+      "routes": 5,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 0,
+          "supplier": 110,
+          "emergency": 0,
+          "cashBDT": 90200,
+          "simulatedStockout": 180,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 0,
+          "supplier": 110,
+          "emergency": 100,
+          "cashBDT": 218200,
+          "simulatedStockout": 80,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 0,
+          "supplier": 110,
+          "emergency": 100,
+          "cashBDT": 218200,
+          "simulatedStockout": 80,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 119,
+      "routes": 100,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 0,
+          "supplier": 110,
+          "emergency": 0,
+          "cashBDT": 90200,
+          "simulatedStockout": 180,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 0,
+          "supplier": 110,
+          "emergency": 100,
+          "cashBDT": 218200,
+          "simulatedStockout": 80,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 0,
+          "supplier": 110,
+          "emergency": 100,
+          "cashBDT": 218200,
+          "simulatedStockout": 80,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 120,
+      "routes": 0,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 90,
+          "supplier": 120,
+          "emergency": 0,
+          "cashBDT": 109200,
+          "simulatedStockout": 80,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 90,
+          "supplier": 120,
+          "emergency": 60,
+          "cashBDT": 186000,
+          "simulatedStockout": 30,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 90,
+          "supplier": 120,
+          "emergency": 100,
+          "cashBDT": 237200,
+          "simulatedStockout": 10,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 120,
+      "routes": 2,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 90,
+          "supplier": 120,
+          "emergency": 0,
+          "cashBDT": 109200,
+          "simulatedStockout": 80,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 90,
+          "supplier": 120,
+          "emergency": 60,
+          "cashBDT": 186000,
+          "simulatedStockout": 30,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 90,
+          "supplier": 120,
+          "emergency": 100,
+          "cashBDT": 237200,
+          "simulatedStockout": 10,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 120,
+      "routes": 3,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 60,
+          "supplier": 120,
+          "emergency": 0,
+          "cashBDT": 105600,
+          "simulatedStockout": 110,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 60,
+          "supplier": 120,
+          "emergency": 90,
+          "cashBDT": 220800,
+          "simulatedStockout": 30,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 60,
+          "supplier": 120,
+          "emergency": 100,
+          "cashBDT": 233600,
+          "simulatedStockout": 25,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 120,
+      "routes": 5,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 0,
+          "supplier": 120,
+          "emergency": 0,
+          "cashBDT": 98400,
+          "simulatedStockout": 170,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 0,
+          "supplier": 120,
+          "emergency": 100,
+          "cashBDT": 226400,
+          "simulatedStockout": 70,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 0,
+          "supplier": 120,
+          "emergency": 100,
+          "cashBDT": 226400,
+          "simulatedStockout": 70,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 120,
+      "routes": 100,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 0,
+          "supplier": 120,
+          "emergency": 0,
+          "cashBDT": 98400,
+          "simulatedStockout": 170,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 0,
+          "supplier": 120,
+          "emergency": 100,
+          "cashBDT": 226400,
+          "simulatedStockout": 70,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 0,
+          "supplier": 120,
+          "emergency": 100,
+          "cashBDT": 226400,
+          "simulatedStockout": 70,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 180,
+      "routes": 0,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 90,
+          "supplier": 140,
+          "emergency": 0,
+          "cashBDT": 125600,
+          "simulatedStockout": 60,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 90,
+          "supplier": 180,
+          "emergency": 0,
+          "cashBDT": 158400,
+          "simulatedStockout": 30,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 90,
+          "supplier": 180,
+          "emergency": 60,
+          "cashBDT": 235200,
+          "simulatedStockout": 5,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 180,
+      "routes": 2,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 90,
+          "supplier": 140,
+          "emergency": 0,
+          "cashBDT": 125600,
+          "simulatedStockout": 60,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 90,
+          "supplier": 180,
+          "emergency": 0,
+          "cashBDT": 158400,
+          "simulatedStockout": 30,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 90,
+          "supplier": 180,
+          "emergency": 60,
+          "cashBDT": 235200,
+          "simulatedStockout": 5,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 180,
+      "routes": 3,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 60,
+          "supplier": 170,
+          "emergency": 0,
+          "cashBDT": 146600,
+          "simulatedStockout": 60,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 60,
+          "supplier": 180,
+          "emergency": 30,
+          "cashBDT": 193200,
+          "simulatedStockout": 30,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 60,
+          "supplier": 180,
+          "emergency": 60,
+          "cashBDT": 231600,
+          "simulatedStockout": 15,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 180,
+      "routes": 5,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 0,
+          "supplier": 180,
+          "emergency": 0,
+          "cashBDT": 147600,
+          "simulatedStockout": 110,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 0,
+          "supplier": 180,
+          "emergency": 70,
+          "cashBDT": 237200,
+          "simulatedStockout": 45,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 0,
+          "supplier": 180,
+          "emergency": 70,
+          "cashBDT": 237200,
+          "simulatedStockout": 45,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 180,
+      "routes": 100,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 0,
+          "supplier": 180,
+          "emergency": 0,
+          "cashBDT": 147600,
+          "simulatedStockout": 110,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 0,
+          "supplier": 180,
+          "emergency": 70,
+          "cashBDT": 237200,
+          "simulatedStockout": 45,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 0,
+          "supplier": 180,
+          "emergency": 70,
+          "cashBDT": 237200,
+          "simulatedStockout": 45,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 10000,
+      "routes": 0,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 90,
+          "supplier": 140,
+          "emergency": 0,
+          "cashBDT": 125600,
+          "simulatedStockout": 60,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 90,
+          "supplier": 180,
+          "emergency": 0,
+          "cashBDT": 158400,
+          "simulatedStockout": 30,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 90,
+          "supplier": 260,
+          "emergency": 0,
+          "cashBDT": 224000,
+          "simulatedStockout": 0,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 10000,
+      "routes": 2,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 90,
+          "supplier": 140,
+          "emergency": 0,
+          "cashBDT": 125600,
+          "simulatedStockout": 60,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 90,
+          "supplier": 180,
+          "emergency": 0,
+          "cashBDT": 158400,
+          "simulatedStockout": 30,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 90,
+          "supplier": 260,
+          "emergency": 0,
+          "cashBDT": 224000,
+          "simulatedStockout": 0,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 10000,
+      "routes": 3,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 60,
+          "supplier": 170,
+          "emergency": 0,
+          "cashBDT": 146600,
+          "simulatedStockout": 60,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 60,
+          "supplier": 210,
+          "emergency": 0,
+          "cashBDT": 179400,
+          "simulatedStockout": 30,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 60,
+          "supplier": 280,
+          "emergency": 0,
+          "cashBDT": 236800,
+          "simulatedStockout": 2.5,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 10000,
+      "routes": 5,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 0,
+          "supplier": 230,
+          "emergency": 0,
+          "cashBDT": 188600,
+          "simulatedStockout": 60,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 0,
+          "supplier": 270,
+          "emergency": 0,
+          "cashBDT": 221400,
+          "simulatedStockout": 30,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 0,
+          "supplier": 290,
+          "emergency": 0,
+          "cashBDT": 237800,
+          "simulatedStockout": 20,
+          "proof": "PASS"
+        }
+      ]
+    },
+    {
+      "capacity": 10000,
+      "routes": 100,
+      "plans": [
+        {
+          "id": "current",
+          "transfer": 0,
+          "supplier": 0,
+          "emergency": 0,
+          "cashBDT": 0,
+          "simulatedStockout": 290,
+          "proof": "PASS"
+        },
+        {
+          "id": "cheapest",
+          "transfer": 0,
+          "supplier": 230,
+          "emergency": 0,
+          "cashBDT": 188600,
+          "simulatedStockout": 60,
+          "proof": "PASS"
+        },
+        {
+          "id": "balanced",
+          "transfer": 0,
+          "supplier": 270,
+          "emergency": 0,
+          "cashBDT": 221400,
+          "simulatedStockout": 30,
+          "proof": "PASS"
+        },
+        {
+          "id": "max-availability",
+          "transfer": 0,
+          "supplier": 290,
+          "emergency": 0,
+          "cashBDT": 237800,
+          "simulatedStockout": 20,
+          "proof": "PASS"
+        }
+      ]
+    }
+  ],
+  "blocked": [
+    {
+      "name": "aggressive",
+      "status": "BLOCK"
+    },
+    {
+      "name": "cash mismatch",
+      "status": "BLOCK"
+    },
+    {
+      "name": "supplier over capacity",
+      "status": "BLOCK"
+    },
+    {
+      "name": "fractional transfer",
+      "status": "BLOCK"
+    },
+    {
+      "name": "pack violation",
+      "status": "BLOCK"
+    },
+    {
+      "name": "donor limit",
+      "status": "BLOCK"
+    },
+    {
+      "name": "emergency limit",
+      "status": "BLOCK"
+    },
+    {
+      "name": "below MOQ",
+      "status": "BLOCK"
+    }
+  ],
+  "held": [
+    {
+      "name": "unreviewed capacity",
+      "status": "HOLD"
+    },
+    {
+      "name": "low confidence",
+      "status": "HOLD"
+    },
+    {
+      "name": "missing evidence",
+      "status": "HOLD"
+    }
+  ]
+}
