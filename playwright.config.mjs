@@ -13,6 +13,6 @@ export default defineConfig({
     {name:'desktop-1440', use:{viewport:{width:1440,height:900}}},
     {name:'desktop-1280', use:{viewport:{width:1280,height:720}}},
     {name:'tablet-1024', use:{viewport:{width:1024,height:768}}},
-    {name:'mobile-390', use:{viewport:{width:390,height:844}}}
+    {name:'mobile-390', use:{viewport:{width:390,height:844},isMobile:true,hasTouch:true}}
   ]
 });

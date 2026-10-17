@@ -7,9 +7,16 @@ export function initContextHelp(){
     cancel();if(active!==root){close();active=root;}
     const trigger=root.querySelector('[data-help]'),panel=root.querySelector('.help-popover');
     panel.hidden=false;trigger.setAttribute('aria-expanded','true');
+    position();
+  }
+  function position(){
+    if(!active)return;
+    const trigger=active.querySelector('[data-help]'),panel=active.querySelector('.help-popover');
     const box=trigger.getBoundingClientRect(),width=panel.offsetWidth,height=panel.offsetHeight;
     const left=Math.max(12,Math.min(box.left+box.width/2-width/2,innerWidth-width-12));
-    const below=box.bottom+8,top=below+height<=innerHeight-12?below:Math.max(12,box.top-height-8);
+    const below=box.bottom+8;
+    const preferred=below+height<=innerHeight-12?below:box.top-height-8;
+    const top=Math.max(12,Math.min(preferred,innerHeight-height-12));
     panel.style.left=left+'px';panel.style.top=top+'px';
   }
   function later(){cancel();timer=setTimeout(()=>{if(active&&!pinned&&!active.matches(':hover')&&!active.contains(document.activeElement))close();},160);}
@@ -20,6 +27,8 @@ export function initContextHelp(){
   document.addEventListener('click',event=>{const trigger=event.target.closest('[data-help]');if(trigger){const root=trigger.closest('.context-help');if(active===root&&pinned)close();else{open(root);pinned=true;}}else if(active&&!active.contains(event.target))close();});
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&active){const trigger=active.querySelector('[data-help]');const inPanel=active.querySelector('.help-popover').contains(document.activeElement);close();if(inPanel){trigger.focus();close();}}});
   document.addEventListener('varelyx:viewchange',close);document.addEventListener('varelyx:languagechange',close);
-  window.addEventListener('resize',close);window.addEventListener('scroll',close,{passive:true});
+  // Focus and taps can finish a smooth scroll after opening the panel.
+  // Follow its anchor instead of dismissing help on that delayed event.
+  window.addEventListener('resize',position);window.addEventListener('scroll',position,{passive:true});
   return {close};
 }

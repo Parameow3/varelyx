@@ -248,8 +248,17 @@ test('context help supports hover or tap, keyboard focus, dismissal and viewport
  const trigger=page.locator('.source-actions [data-help]');const help=page.locator('#sourceHelp');
  await expect(page.locator('#mainWorkspace [data-operation]:visible')).toHaveCount(1);
  await expect(help).not.toBeVisible();
- if(page.viewportSize().width>800)await trigger.hover();else await trigger.click();
+ if(page.viewportSize().width>800)await trigger.hover();else await trigger.tap();
  await expect(help).toBeVisible();await expect(help).toContainText('AI extracts facts');
+ if(page.viewportSize().width<=800){
+   // A phone can finish scrolling after the tap/focus has opened help.
+   const before=await page.evaluate(()=>scrollY);
+   await page.evaluate(()=>window.scrollBy({top:24,behavior:'instant'}));
+   await expect.poll(()=>page.evaluate(()=>scrollY)).toBeGreaterThan(before);
+   await expect(help).toBeVisible();await expect(trigger).toHaveAttribute('aria-expanded','true');
+   await page.setViewportSize({width:360,height:780});
+   await expect(help).toBeVisible();
+ }
  const box=await help.boundingBox();expect(box.x).toBeGreaterThanOrEqual(0);expect(box.x+box.width).toBeLessThanOrEqual(page.viewportSize().width);expect(box.y+box.height).toBeLessThanOrEqual(page.viewportSize().height);
  await page.keyboard.press('Escape');await expect(help).not.toBeVisible();
  await page.locator('#viewTitle').click();await trigger.focus();await expect(help).toBeVisible();
