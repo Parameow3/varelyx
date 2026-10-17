@@ -30,7 +30,13 @@ Use a dedicated browser session and synthetic supplier text:
 
 Anonymous Auth, API-key restrictions, AI Logic availability, database rules and quotas still apply. A registered App Check token does not override those controls. Revoking a device token in Firebase removes its App Check access.
 
-## Current verification: October 16, 2026
+## Current verification: October 17, 2026
+
+Saidur confirmed registration of this device's private token at 07:53 Cambodia time. The local candidate then passed the real Firebase/Gemini flow at 10:25: live extraction, HOLD, reviewed capacity, PASS → BLOCK → PASS, explicit approval, verified Firebase save and exact full-state restoration after reload. See [live QA evidence](LIVE_QA_2026-10-17.md). Production security settings and deployment were unchanged.
+
+The earlier HTTP 403 registration blocker below is resolved for this device. New devices still need their own private registered token. Owner PR/release review remains pending.
+
+## Historical verification: October 16, 2026
 
 Verification: 101 Node tests and 18 browser tests passed; 6 live/capture browser cases remain gated. The device token is ignored by Git and absent from public deployment assets.
 

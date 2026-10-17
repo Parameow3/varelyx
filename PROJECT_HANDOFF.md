@@ -1,5 +1,9 @@
 # Varelyx - Project Handoff / Single Source of Truth
 
+## October 17, 2026: local candidate live-service verification passed
+
+The project owner registered the private local App Check token. The candidate based on `2499f48`, served locally against real Gemini/Firebase, passed HOLD → review → PASS → BLOCK (approval disabled) → PASS → human approval → verified save → reload. Exact exported state, capacity 120, receipt, five sandbox actions, audit and proof history matched after reload. See `docs/LIVE_QA_2026-10-17.md` for fresh evidence and exports. PR #7 awaits owner review; no merge or production deployment was performed. Earlier registration/live-pending notes below are historical.
+
 ## October 17, 2026: UI/UX and operator workflow candidate
 
 The decision workspace now has clearer current-step navigation, in-app evidence/approval dialogs, readable retail action records, and saved PASS/BLOCK history. Local fixture-based verification is documented in `docs/UIUX_REVIEW_2026-10-17.md`. Live Firebase/Gemini verification and production release remain pending; the older production evidence below is historical.
